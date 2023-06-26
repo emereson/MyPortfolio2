@@ -176,7 +176,7 @@ transition: 0.5s;
     color: #00fbff;
   }
 
-  @media (max-width: 850px) {
+  @media (max-width: 1000px) {
     .projects__container{
         height: 100%;
         padding-top: 5em;

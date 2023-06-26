@@ -70,7 +70,7 @@
     }
   }
   
-  @media (max-width: 850px) {
+  @media (max-width: 1000px) {
     .home__container{
         min-height: 667px;
         height: auto;

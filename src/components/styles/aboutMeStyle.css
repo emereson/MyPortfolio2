@@ -163,7 +163,7 @@ color: #6f0ad4;
     color: blue;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1000px) {
     .aboutMe__container{
         height: 100%;
     }

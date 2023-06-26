@@ -17,7 +17,7 @@ function App() {
 
       <Header />
 
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense >
         <LazyHome />
         <LazyAboutme />
         <LazyProjects />

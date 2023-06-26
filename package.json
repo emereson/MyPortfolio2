@@ -1,5 +1,5 @@
 {
-  "name": "edificio1",
+  "name": "portafolio2",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,10 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@react-three/drei": "^9.76.0",
+    "@lottiefiles/react-lottie-player": "^3.5.3",
+    "@react-three/drei": "^9.77.1",
     "@react-three/fiber": "^8.13.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-in-viewport": "^1.0.0-alpha.30",
+    "react-intersection-observer": "^9.5.1",
+    "react-router-dom": "^6.13.0",
+    "react-scroll": "^1.8.9",
+    "react-use-gesture": "^9.1.3",
     "three": "^0.153.0"
   },
   "devDependencies": {

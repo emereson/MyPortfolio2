@@ -1,28 +1,26 @@
-import React, { Suspense } from 'react';
-import { Canvas } from '@react-three/fiber';
+import React from 'react';
 import './App.css';
-import { OrbitControls, useGLTF } from '@react-three/drei';
-
-function Model() {
-  const gltf = useGLTF('/model.gltf');
-  return <primitive object={gltf.scene} />;
-}
+import Home from './components/Home';
+import Header from './components/Header';
+import Projects from './components/Projects';
+import Aboutme from './components/Aboutme';
+import Contacts from './components/Contacts';
 
 function App() {
+ 
   return (
-    <>
-      <h1>¡Hola mundo!</h1>
-      <div style={{ height: "80vh", width: "100%" }}>
-        <Canvas camera={{ zoom: 4, position: [15, 20, 15] }}>
-          <ambientLight intensity={0.5} />
-          <pointLight position={[5, 35, 35]} intensity={3} />
-          <Suspense fallback={null}>
-            <Model />
-          </Suspense>
-          <OrbitControls />
-        </Canvas>
+    <div className="app_container">
+      <div className="app__img">
+        <span></span>
+        <img src="./font.png" alt="" />
       </div>
-    </>
+
+      <Header />
+      <Home />
+      <Aboutme />
+      <Projects />
+      <Contacts />
+    </div>
   );
 }
 

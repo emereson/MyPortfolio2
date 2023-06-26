@@ -68,7 +68,7 @@ const Projects = () => {
           </a>
           <a href="" className='projects_link'>Probar QR</a>
         </div>
-        <div className='projects__oneProjects oneProjects2' style={{ transform: showProjects ? 'translateX(0)' : "translateX(-100%)", transition: 'transform 1.5s ease' }}>
+        <div className='projects__oneProjects oneProjects2' style={{ transform: showProjects ? 'translateX(0)' : "translateX(-100%)", transition: 'transform 1s ease' }}>
           <img src="./ligaPadel.png" alt="" />
           <h3>Liga Padel</h3>
           <p>
@@ -88,7 +88,7 @@ const Projects = () => {
           </a>
           <a href="" className='projects_link'>ver pagina</a>
         </div>
-        <div className='projects__oneProjects oneProjects3' style={{ transform: showProjects ? 'translateX(0)' : "translateX(-200%)", transition: 'transform 3s ease' }}>
+        <div className='projects__oneProjects oneProjects3' style={{ transform: showProjects ? 'translateX(0)' : "translateX(-200%)", transition: 'transform 2s ease' }}>
           <img src="./netflyx.png" alt="" />
           <h3>Netflyx</h3>
           <p>

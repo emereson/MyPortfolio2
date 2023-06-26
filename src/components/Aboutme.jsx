@@ -5,26 +5,21 @@ import './styles/aboutMeStyle.css';
 const Aboutme = () => {
 
   const [aboutMeVisible, setAboutMeVisible] = useState(false);
-  const [skillsVisible, setskillsVisible] = useState(false);
 
   const handleScroll = () => {
     const elementAboutMe = document.getElementById('aboutMe');
-    const elemenSkill = document.getElementById('skill');
 
     if (elementAboutMe && isElementVisible(elementAboutMe)) {
       setAboutMeVisible(true);
-    } 
-    if (elemenSkill && isElementVisible(elementAboutMe)) {
-      setskillsVisible(true);
     } 
   };
 
   const isElementVisible = (element) => {
     const rect = element.getBoundingClientRect();
     const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-    const topOffset = 400;
+    const topOffset = 500;
 
-    return rect.top + topOffset < windowHeight && rect.bottom > 100;
+    return rect.top + topOffset < windowHeight && rect.bottom > 300;
   };
 
   useEffect(() => {

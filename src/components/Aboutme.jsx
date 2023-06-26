@@ -39,7 +39,7 @@ const Aboutme = () => {
     });
   }, []);
   return (
-<div className="aboutMe__container" style={{ opacity: aboutMeVisible ? 1 : 0, transition: 'opacity 1.5s ease' }} >
+<div className="aboutMe__container" style={{ opacity: aboutMeVisible ? 1 : 0, transition: 'opacity 1s ease' }} >
       <div className="aboutme" id="aboutMe">
         <Player
           className="aboutMe__player"

@@ -26,6 +26,7 @@
 
 .projects__dates span{
     font-size: 0.85em;
+    text-align: center;
 color: #00fbff;
 max-width: 60em;
 }
@@ -121,6 +122,7 @@ transition: 0.5s;
     position: absolute;
     bottom: 1.5em;
     color: #e42a52;
+    cursor: pointer;
 }
 
 .projects_link::after {
@@ -143,4 +145,44 @@ transition: 0.5s;
     color: #6f0ad4;
     text-shadow: 0em 0.2em 0.5em #7c1cdc;
     transition: 0.5s;
+  }
+
+  .project__imageQr{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.789);
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+  }
+
+  .project__imageQr img{
+    width: 300px;
+    height: 300px;
+  }
+
+  .project__imageQr p{
+    cursor: pointer;
+    font-size: 1.8em;
+    color: #e42a52;
+  }
+
+  .project__imageQr p:hover{
+    color: #00fbff;
+  }
+
+  @media (max-width: 850px) {
+    .projects__container{
+        height: 100%;
+        padding-top: 5em;
+    }
+    .skills{
+        margin: 0;
+        padding-top: 2em;
+    }
   }

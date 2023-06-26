@@ -162,3 +162,13 @@ color: #6f0ad4;
 .php{
     color: blue;
 }
+
+@media (max-width: 850px) {
+    .aboutMe__container{
+        height: 100%;
+    }
+    .skills{
+        margin: 0;
+        padding-top: 2em;
+    }
+  }

@@ -54,14 +54,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #e12c53;
     transition: 0.5s;
     cursor: pointer;
 }
 .contact__date li:hover{
 background-color: #e12c53c4;
-color: black;
 transition: 0.5s;
+}
+.contact__date li a{
+    color: #e12c53;
+    transition: 0.5s;
+}
+.contact__date li a:hover{
+    color: black;
+    transition: 0.5s;
 }
 
 .contact__date i{
@@ -201,3 +207,17 @@ top: 110%;
     }
 
 }
+
+@media (max-width: 850px) {
+    .contact__container{
+        height: 100%;
+        padding: 0.5em;
+        padding-top: 5em;
+        padding-bottom: 2em;
+        
+    }
+    .contact__canvas div{
+        pointer-events: none !important;
+    }
+    
+  }

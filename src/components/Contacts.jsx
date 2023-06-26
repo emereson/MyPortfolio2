@@ -4,8 +4,9 @@ import React, { Suspense, useEffect, useState } from 'react';
 import './styles/contactStyle.css';
 
 const Contacts = () => {
-
+  
   const [aboutMeVisible, setAboutMeVisible] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const Model = () => {
     const gltf = useGLTF('/tree.gltf');
@@ -37,6 +38,20 @@ const Contacts = () => {
     };
   }, []);
 
+
+const handleResize = () => {
+  setWindowWidth(window.innerWidth);
+};
+
+useEffect(() => {
+  window.addEventListener('resize', handleResize);
+  return () => {
+    window.removeEventListener('resize', handleResize);
+  };
+}, []);
+
+const zoom = windowWidth < 850 ? 1.3 : 2;
+const cameraPosition = [10, 8, 10];
   return (
     <div className="contact__container" style={{ opacity: aboutMeVisible ? 1 : 0, transition: 'opacity 2s ease' }} id='contacMe'>
       <section>
@@ -49,7 +64,7 @@ const Contacts = () => {
         </div>
       </section>
       <div className="contact__canvas">
-        <Canvas camera={{ zoom: 2, position: [10, 8, 10] }}>
+      <Canvas camera={{ zoom, position: cameraPosition }}>
           <ambientLight intensity={0.3} />
           <pointLight position={[5, 5, 5]} intensity={1} color={'rgb(222, 106, 188)'} />
           <Suspense fallback={null}>
@@ -66,20 +81,25 @@ const Contacts = () => {
         </span>
         <ul>
           <li>
-            <a href=""></a>
+            <a href="https://www.facebook.com/profile.php?id=100087974955688" target='_blank' >
             <i className="bx bxl-facebook-circle"></i>
+            </a>
           </li>
           <li>
-            <a href=""></a>
+            <a href="https://wa.link/ohedux" target='_blank'>
             <i className="bx bxl-whatsapp"></i>
+            </a>
           </li>
           <li>
-            <a href=""></a>
+            <a href="https://www.linkedin.com/in/emerson-yujra-997b52260" target='_blank'>
             <i className="bx bxl-linkedin"></i>
+            </a>
           </li>
           <li>
-            <a href=""></a>
+          <a href="mailto:escanorrosa123@gmail.com" target='_blank'>
             <i className="bx bxl-gmail"></i>
+          </a>
+
           </li>
         </ul>
       </div>

@@ -4,6 +4,7 @@ import { Controls, Player } from '@lottiefiles/react-lottie-player';
 import './styles/homeStyle.css';
 
 const Home = () => {
+  // home
   return (
     <div className="home__container" id="home">
       <div className="home__date">

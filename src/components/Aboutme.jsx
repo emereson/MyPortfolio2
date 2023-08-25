@@ -16,7 +16,7 @@ const Aboutme = () => {
   const isElementVisible = (element) => {
     const rect = element.getBoundingClientRect();
     const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-    const topOffset = 500;
+    const topOffset = -100;
 
     return rect.top + topOffset < windowHeight && rect.bottom > 300;
   };

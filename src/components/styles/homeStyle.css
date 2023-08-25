@@ -53,7 +53,7 @@
 }
 
 .home__player {
-  width: 35em;
+  width: 40%;
 }
 
 @media (max-width: 1000px) {

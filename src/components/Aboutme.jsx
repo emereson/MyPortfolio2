@@ -3,7 +3,6 @@ import { Player, Controls } from '@lottiefiles/react-lottie-player';
 import './styles/aboutMeStyle.css';
 
 const Aboutme = () => {
-
   const [aboutMeVisible, setAboutMeVisible] = useState(false);
 
   const handleScroll = () => {
@@ -11,7 +10,7 @@ const Aboutme = () => {
 
     if (elementAboutMe && isElementVisible(elementAboutMe)) {
       setAboutMeVisible(true);
-    } 
+    }
   };
 
   const isElementVisible = (element) => {
@@ -30,7 +29,7 @@ const Aboutme = () => {
     };
   }, []);
 
-   useEffect(() => {
+  useEffect(() => {
     const skills = document.querySelectorAll('.skills__li i');
 
     skills.forEach((skill) => {
@@ -39,31 +38,24 @@ const Aboutme = () => {
     });
   }, []);
   return (
-<div className="aboutMe__container" style={{ opacity: aboutMeVisible ? 1 : 0, transition: 'opacity 1s ease' }} >
-      <div className="aboutme" id="aboutMe">
-        <Player
-          className="aboutMe__player"
-          autoplay
-          loop
-          src="https://assets1.lottiefiles.com/packages/lf20_xvmprung.json"
-        >
-          <Controls visible={false}  />
-        </Player>
-        <div className="aboutMe__date">
-          <h2>Sobre Mí</h2>
-          <p>
-            Hola, mi nombre es Emerson, pero mis amigos me llaman "Reizor". Soy una persona
-            autodidacta. Desde que conocí el mundo de la programación, se ha convertido en mi
-            pasatiempo favorito junto al deporte de contacto "mma".
-          </p>
-          <p>
-            Tengo excelentes habilidades de comunicación. Me encanta colaborar y trabajar en equipo.
-            Actualmente, estoy buscando un trabajo de tiempo completo como desarrollador full-stack
-            , front-end o back-end.
-          </p>
-        </div>
+    <div
+      className="aboutMe__container"
+      style={{ opacity: aboutMeVisible ? 1 : 0, transition: 'opacity 1s ease' }}
+    >
+      <div className="aboutMe__date" id="aboutMe">
+        <h2>Sobre Mí</h2>
+        <p>
+          Hola, mi nombre es Emerson, pero mis amigos me llaman "Reizor". Soy una persona
+          autodidacta. Desde que conocí el mundo de la programación, se ha convertido en mi
+          pasatiempo favorito junto al deporte de contacto "mma".
+        </p>
+        <p>
+          Tengo excelentes habilidades de comunicación. Me encanta colaborar y trabajar en equipo.
+          Actualmente, estoy buscando un trabajo de tiempo completo como desarrollador full-stack ,
+          front-end o back-end.
+        </p>
       </div>
-      <div className="skills" id='skill'>
+      <div className="skills" id="skill">
         <h2>Mis Habilidades</h2>
         <ul className="skills__ul">
           <li className="skills__li javascript">
@@ -99,11 +91,11 @@ const Aboutme = () => {
             <span>Postgre SQL</span>
           </li>
           <li className="skills__li blender">
-          <i className='bx bxl-blender'></i>
+            <i className="bx bxl-blender"></i>
             <span>Blender</span>
           </li>
           <li className="skills__li php">
-          <i className='bx bxl-php' ></i>
+            <i className="bx bxl-php"></i>
             <span>php</span>
           </li>
         </ul>

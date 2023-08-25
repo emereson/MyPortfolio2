@@ -1,95 +1,84 @@
-.home__container{
-    width: 100%;
-    height: 100vh;
-    display: flex;
+.home__container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
 }
 
-.home__date{
-    margin: auto;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1em;
-    padding-top: 7em;
-    z-index: 2;
+.home__date {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  padding-top: 7em;
+  z-index: 2;
+  gap: 1.5em;
 }
-.home__date h2{
-    width: 0;
-    height: auto;
-    font-size: 2em;
-    overflow: hidden;
-    white-space: nowrap;
-    text-align: center;
-    color: #6f0ad4;
-    text-shadow: 0em 0.2em 0.5em #46008b ;
-    animation: typing 6s steps(70) 1s 1 normal both;
+.home__date h2 {
+  width: 0;
+  height: auto;
+  font-size: 4em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  color: var(--body-white);
+  font-weight: 400;
+  animation: typing 6s steps(70) 1s 1 normal both;
 }
 
-.home__date h3{
-    width: 0;
-    font-size: 1.4em;
-    text-align: center;
-    margin: 0.5em;
-    overflow: hidden;
-    white-space: nowrap;
-    color: #00fbff;
-    text-shadow: 0em 0.2em 0.5em #046566b6 ;
-    animation: typing 3.7s steps(60) 4s 1 normal both;
+.home__date h3 {
+  width: 0;
+  font-size: 2.5em;
+  font-weight: 400;
+  text-align: center;
+  margin: 0.5em;
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--text-color-white);
+
+  animation: typing 3.7s steps(60) 4s 1 normal both;
 }
 
 @keyframes typing {
-    from {
-        width: 0;
-    }
+  from {
+    width: 0;
+  }
 
-    to {
-        width: 100%;
-    }
+  to {
+    width: 100%;
+  }
 }
 
-.homeDate__canvasContainer  {
-    padding-top: 2em;
+.home__player {
+  width: 35em;
+}
+
+@media (max-width: 1000px) {
+  .home__container {
+    min-height: 667px;
+    height: auto;
+  }
+  .home__date h2 {
+    font-size: 1.5em;
+  }
+
+  .home__date h3 {
+    font-size: 1.15em;
+    animation: typing 4.7s steps(60) 4s 1 normal both;
+  }
+
+  .homeDate__canvasContainer div {
+    pointer-events: none !important;
+  }
+  .homeDate__canvasContainer canvas {
+    min-width: 300px;
+    min-height: 300px !important;
+    padding-top: 4em;
+  }
+  .home__player {
     width: 100%;
-    height: 100%;
-    max-width: 40em;
-    max-height: 30em;
-    opacity: 0;
-    animation: canvas 1.5s forwards;
   }
-  
-  @keyframes canvas {
-    0% {
-      opacity: 0;
-    }
-  
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  @media (max-width: 1000px) {
-    .home__container{
-        min-height: 667px;
-        height: auto;
-    }
-    .home__date h2{
-        font-size: 1.5em;
-    }
-
-    .home__date h3{
-        font-size: 1.15em;
-        animation: typing 4.7s steps(60) 4s 1 normal both;
-    }
-
-    .homeDate__canvasContainer div{
-        pointer-events: none !important;
-    }
-    .homeDate__canvasContainer canvas{
-        min-width: 300px;
-        min-height: 300px !important;
-        padding-top: 4em;
-    }
-  }
+}

@@ -1,223 +1,92 @@
-.contact__container{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-wrap:wrap ;
-    justify-content: center;
-    align-items: center;
-    gap: 4em;
+.contact__container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
 }
 
-.contact__canvas{
-    width: 100%;
-    max-width: 35em;
-    height: 40em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.contact__canvas {
+  width: 100%;
+  max-width: 35em;
+  height: 40em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.contact__date{
- width: 100%;
- max-width: 35em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.contact__date h2{
-    font-size: 2.4em;
-    color: #7718d6;
+.contact__date {
+  width: 100%;
+  max-width: 35em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.contact__date span{
-    text-align: center;
-    font-size: 1.2em;
-    color: #18c7ca;
-    font-weight: 200;
-    padding: 1em;
+.contact__date h2 {
+  font-size: 2.5em;
+  font-weight: 400;
+  color: var(--text-color-beigh);
 }
 
-.contact__date ul{
-    padding-top: 4em;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2em;
+.contact__date span {
+  text-align: center;
+  font-size: 1.35em;
+  color: var(--text-color-white);
+  font-weight: 200;
+  padding: 1em;
 }
 
-.contact__date li{
-    width: 3em;
-    height: 3em;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.744);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s;
-    cursor: pointer;
-}
-.contact__date li:hover{
-background-color: #e12c53c4;
-transition: 0.5s;
-}
-.contact__date li a{
-    color: #e12c53;
-    transition: 0.5s;
-}
-.contact__date li a:hover{
-    color: black;
-    transition: 0.5s;
+.contact__date ul {
+  position: relative;
+  z-index: 10;
+  padding-top: 4em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
 }
 
-.contact__date i{
-font-size: 2em;
+.contact__date li {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.744);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  cursor: pointer;
 }
-section{
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.contact__date li:hover {
+  background-color: var(--text-color-white);
+  transition: 0.5s;
 }
-.set {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    pointer-events: none;
+.contact__date li a {
+  color: var(--text-color-beigh);
+  transition: 0.5s;
 }
-
-section .set div{
-    width: 0.5em;
-    position: absolute;
-    display: block;
+.contact__date li a:hover {
+  color: black;
+  transition: 0.5s;
 }
 
-section .set div:nth-child(1){
-    left: 20%;
-    animation: animate 15s linear infinite;
-}
-section .set div:nth-child(2){
-    left: 0%;
-    animation: animate 10s linear infinite;
-}
-section .set div:nth-child(3){
-    left: 10%;
-    animation: animate 20s linear infinite;
-}
-section .set div:nth-child(4){
-    left: 30%;
-    animation: animate 15s linear infinite;
-}
-section .set div:nth-child(5){
-    left: 40%;
-    animation: animate 17s linear infinite;
-}
-section .set div:nth-child(6){
-    left: 60%;
-    animation: animate 19s linear infinite;
-}
-section .set div:nth-child(7){
-    left: 70%;
-    animation: animate 12s linear infinite;
-}
-section .set div:nth-child(8){
-    left: 80%;
-    animation: animate 14s linear infinite;
-}
-section .set div:nth-child(9){
-    left: 90%;
-    animation: animate 17s linear infinite;
-}
-section .set div:nth-child(10){
-    left: 100%;
-    animation: animate 16s linear infinite;
-}
-section .set div:nth-child(11){
-    left: 5%;
-    animation: animate 15s linear infinite;
-}
-section .set div:nth-child(12){
-    left: 15%;
-    animation: animate 10s linear infinite;
-}
-section .set div:nth-child(13){
-    left: 25%;
-    animation: animate 20s linear infinite;
-}
-section .set div:nth-child(14){
-    left: 35%;
-    animation: animate 15s linear infinite;
-}
-section .set div:nth-child(15){
-    left: 45%;
-    animation: animate 17s linear infinite;
-}
-section .set div:nth-child(16){
-    left: 55%;
-    animation: animate 19s linear infinite;
-}
-section .set div:nth-child(17){
-    left: 65%;
-    animation: animate 12s linear infinite;
-}
-section .set div:nth-child(18){
-    left: 75%;
-    animation: animate 14s linear infinite;
-}
-section .set div:nth-child(19){
-    left: 85%;
-    animation: animate 17s linear infinite;
-}
-section .set div:nth-child(20){
-    left: 95%;
-    animation: animate 6s linear infinite;
-}
-@keyframes animate {
-    0%{
-        opacity: 0;
-        top: -10%;
-        transform: translateX(0px) rotate(0deg);
-    }
-    20%{
-        opacity:1;
-        transform: translateX(20px) rotate(45deg);
-    }
-    40%{
-        transform: translatex(100px) rotate(90deg);
-    }
-    60%{
-        transform: translateX(200px) rotate(180deg);
-    }
-    80%{
-
-        transform: translateX(-20px) rotate(180deg);
-    }
-    80%{
-top: 110%;
-        transform: translateX(-20px) rotate(225deg);
-    }
-    100%{
-        opacity: 0;
-    }
-
+.contact__date i {
+  font-size: 2em;
 }
 
 @media (max-width: 1000px) {
-    .contact__container{
-        height: 100%;
-        padding: 0.5em;
-        padding-top: 5em;
-        padding-bottom: 2em;
-        
-    }
-    .contact__canvas div{
-        pointer-events: none !important;
-    }
-    
+  .contact__container {
+    height: 100%;
+    padding: 0.5em;
+    padding-top: 5em;
+    padding-bottom: 2em;
   }
+  .contact__date h2 {
+    font-size: 2em;
+  }
+  .contact__date span {
+    font-size: 1em;
+  }
+}

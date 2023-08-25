@@ -26,9 +26,9 @@
 
 .header__a {
   position: relative;
-  font-size: 1.2em;
-  color: #f41e3e;
-  text-shadow: 0em 0.1em 0.5em #ad021ca6;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: var(--text-color-beigh);
   transition: 0.5s;
 }
 
@@ -39,7 +39,7 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #6f0ad4;
+  background-color: var(--text-color-beigh);
   transform: scaleX(0);
   transition: transform 0.3s ease-in-out;
 }
@@ -49,16 +49,15 @@
 }
 
 .header__a:hover {
-  color: #6f0ad4;
-  text-shadow: 0em 0.2em 0.5em #6f0ad4;
+  color: var(--text-color-beigh);
   transition: 0.5s;
 }
 
 .a__animacion {
   position: relative;
-  font-size: 1.2em;
-  color: #6f0ad4;
-  text-shadow: 0em 0.1em 0.5em #6f0ad4;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: var(--body-white);
   transition: 0.5s;
 }
 
@@ -69,7 +68,7 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #6f0ad4;
+  background-color: var(--body-white);
   transform: scaleX(1);
   transition: transform 0.3s ease-in-out;
 }
@@ -85,7 +84,7 @@
   .header i {
     display: block;
     font-size: 2.5em;
-    color: #f41e3e;
+    color: var(--text-color-beigh);
     position: absolute;
     right: 0.5em;
   }

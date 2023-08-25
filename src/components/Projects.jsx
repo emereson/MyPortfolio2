@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import "./styles/projectsStyle.css"
+import './styles/projectsStyle.css';
 
 const Projects = () => {
   const [aboutMeVisible, setAboutMeVisible] = useState(false);
-  const [showProjects, setshowProjects] = useState(false)
-  const [imageQr ,setImageQr] = useState(false)
+  const [showProjects, setshowProjects] = useState(false);
+  const [imageQr, setImageQr] = useState(false);
 
   const handleScroll = () => {
     const elementAboutMe = document.getElementById('projects');
 
     if (elementAboutMe && isElementVisible(elementAboutMe)) {
       setAboutMeVisible(true);
-      setTimeout(()=>{
-        setshowProjects(true)
-      },1000)
-    } 
+      setTimeout(() => {
+        setshowProjects(true);
+      }, 1000);
+    }
   };
 
   const isElementVisible = (element) => {
@@ -33,11 +33,12 @@ const Projects = () => {
     };
   }, []);
 
-  console.log(imageQr);
-
-
   return (
-    <div className="projects__container" style={{ opacity: aboutMeVisible ? 1 : 0, transition: 'opacity 2s ease' }} id='projects'>
+    <div
+      className="projects__container"
+      style={{ opacity: aboutMeVisible ? 1 : 0, transition: 'opacity 2s ease' }}
+      id="projects"
+    >
       <div className="projects__dates">
         <h2>Mis Proyectos</h2>
         <span>
@@ -48,8 +49,9 @@ const Projects = () => {
           manera efectiva.
         </span>
       </div>
-      <div className='projects__informationProjects'>
-        <div className="projects__oneProjects oneProjects1" >
+      <div className="projects__informationProjects">
+        <div className="projects__oneProjects oneProjects1">
+          <div className="pojects__oldEfect"> </div>
           <img src="./qrPet.png" alt="" />
           <h3>Aquí Estoy</h3>
           <p>
@@ -66,21 +68,38 @@ const Projects = () => {
             <li>#PostgreSQL</li>
             <li>#Google Maps</li>
           </ul>
-          <a href="https://github.com/emereson/nodePetQR.git" target='_blank' className='projects__gitHub'>
-            <i className="bx bxl-github"></i>
+
+          <a
+            className="projects_link"
+            onClick={() => {
+              setImageQr(true);
+            }}
+          >
+            Probar QR
           </a>
-          <a className='projects_link' onClick={() => { setImageQr(true) }}>Probar QR</a>
-          {
-            imageQr?
-            <div className='project__imageQr'> 
+          {imageQr ? (
+            <div className="project__imageQr">
               <img src="./qr.png" alt="" />
-              <p onClick={() => { setImageQr(false) }}>cerrar imagen</p>
+              <p
+                onClick={() => {
+                  setImageQr(false);
+                }}
+              >
+                cerrar imagen
+              </p>
             </div>
-            :
+          ) : (
             ''
-          }
+          )}
         </div>
-        <div className='projects__oneProjects oneProjects2' style={{ transform: showProjects ? 'translateX(0)' : "translateX(-100%)", transition: 'transform 1s ease' }}>
+        <div
+          className="projects__oneProjects oneProjects2"
+          style={{
+            transform: showProjects ? 'translateX(0)' : 'translateX(-100%)',
+            transition: 'transform 1s ease',
+          }}
+        >
+          <div className="pojects__oldEfect"> </div>
           <img src="./ligaPadel.png" alt="" />
           <h3>Liga Padel</h3>
           <p>
@@ -95,12 +114,22 @@ const Projects = () => {
             <li>#React Js</li>
             <li>#Postgre SQL</li>
           </ul>
-          <a href="https://github.com/emereson/reactLigaPadel.git" target='_blank' className='projects__gitHub'>
-            <i className="bx bxl-github"></i>
+          <a
+            href="https://strong-pixie-20867c.netlify.app/"
+            target="_blank"
+            className="projects_link"
+          >
+            ver pagina
           </a>
-          <a href="https://strong-pixie-20867c.netlify.app/" target='_blank' className='projects_link'>ver pagina</a>
         </div>
-        <div className='projects__oneProjects oneProjects3' style={{ transform: showProjects ? 'translateX(0)' : "translateX(-200%)", transition: 'transform 2s ease' }}>
+        <div
+          className="projects__oneProjects oneProjects3"
+          style={{
+            transform: showProjects ? 'translateX(0)' : 'translateX(-200%)',
+            transition: 'transform 2s ease',
+          }}
+        >
+          <div className="pojects__oldEfect"> </div>
           <img src="./netflyx.png" alt="" />
           <h3>Netflyx</h3>
           <p>
@@ -111,10 +140,14 @@ const Projects = () => {
           <ul>
             <li>#React Js</li>
           </ul>
-          <a href="https://github.com/emereson/Metflix.git" target='_blank' className='projects__gitHub'>
-            <i className="bx bxl-github"></i>
+
+          <a
+            href="https://dulcet-cucurucho-90d923.netlify.app/"
+            target="_blank"
+            className="projects_link"
+          >
+            ver pagina
           </a>
-          <a href="https://dulcet-cucurucho-90d923.netlify.app/"  target='_blank' className='projects_link'>ver pagina</a>
         </div>
       </div>
     </div>

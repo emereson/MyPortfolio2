@@ -10,14 +10,9 @@ const LazyContacts = lazy(() => import('./components/Contacts'));
 function App() {
   return (
     <div className="app_container">
-      <div className="app__img">
-        <span></span>
-        <img src="./font.png" alt="" />
-      </div>
-
+      <div className="film-effect"></div>
       <Header />
-
-      <Suspense >
+      <Suspense>
         <LazyHome />
         <LazyAboutme />
         <LazyProjects />

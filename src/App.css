@@ -33,3 +33,39 @@
   opacity: 0.05;
   background-image: url('/effectold.gif');
 }
+
+.loading__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(6, 6, 6);
+  z-index: 100;
+}
+
+.loading__player {
+  width: 50vw;
+  animation: loading-animation 3.8s forwards;
+}
+
+@keyframes loading-animation {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .loading__player {
+    width: 80vw;
+  }
+}

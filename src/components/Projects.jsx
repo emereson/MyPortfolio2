@@ -52,6 +52,33 @@ const Projects = () => {
       <div className="projects__informationProjects">
         <div className="projects__oneProjects oneProjects1">
           <div className="pojects__oldEfect"> </div>
+          <img src="./henrygil.png" alt="" />
+          <h3>Henry Gil Weddings </h3>
+          <p>
+            Esta página web ha sido cuidadosamente diseñada y desarrollada para un talentoso
+            camarógrafo profesional. Aquí, él tiene la oportunidad de compartir y mostrar al mundo
+            su impresionante trabajo en forma de videos de alta calidad y una variada galería de
+            imágenes capturadas en diversas situaciones y lugares.
+          </p>
+
+          <ul>
+            <li>#Node.js</li>
+            <li>#React.js</li>
+            <li>#PostgreSQL</li>
+          </ul>
+
+          <a href="https://henrygilweddings.com" target="_blank" className="projects_link">
+            ver pagina
+          </a>
+        </div>
+        <div
+          className="projects__oneProjects oneProjects2"
+          style={{
+            transform: showProjects ? 'translateX(0)' : '',
+            transition: 'transform 2s ease',
+          }}
+        >
+          <div className="pojects__oldEfect"> </div>
           <img src="./qrPet.png" alt="" />
           <h3>Aquí Estoy</h3>
           <p>
@@ -93,9 +120,9 @@ const Projects = () => {
           )}
         </div>
         <div
-          className="projects__oneProjects oneProjects2"
+          className="projects__oneProjects oneProjects3"
           style={{
-            transform: showProjects ? 'translateX(0)' : 'translateX(-100%)',
+            transform: showProjects ? 'translateX(0)' : '',
             transition: 'transform 1s ease',
           }}
         >
@@ -123,9 +150,9 @@ const Projects = () => {
           </a>
         </div>
         <div
-          className="projects__oneProjects oneProjects3"
+          className="projects__oneProjects oneProjects4"
           style={{
-            transform: showProjects ? 'translateX(0)' : 'translateX(-200%)',
+            transform: showProjects ? 'translateX(0)' : '',
             transition: 'transform 2s ease',
           }}
         >

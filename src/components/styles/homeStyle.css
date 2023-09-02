@@ -38,7 +38,6 @@
   overflow: hidden;
   white-space: nowrap;
   color: var(--text-color-white);
-
   animation: typing 3.7s steps(60) 4s 1 normal both;
 }
 
@@ -79,6 +78,6 @@
     padding-top: 4em;
   }
   .home__player {
-    width: 100%;
+    width: 35;
   }
 }

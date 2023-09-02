@@ -63,6 +63,9 @@
 .oneProjects3 {
   transform: translateX(-200%);
 }
+.oneProjects4 {
+  transform: translateX(-300%);
+}
 
 .projects__oneProjects img {
   width: 100%;

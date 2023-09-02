@@ -53,6 +53,19 @@
 
 .home__player {
   width: 40%;
+  animation: home-player 6s forwards;
+}
+
+@keyframes home-player {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
 }
 
 @media (max-width: 1000px) {

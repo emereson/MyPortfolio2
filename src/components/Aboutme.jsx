@@ -3,32 +3,6 @@ import { Player, Controls } from '@lottiefiles/react-lottie-player';
 import './styles/aboutMeStyle.css';
 
 const Aboutme = () => {
-  const [aboutMeVisible, setAboutMeVisible] = useState(false);
-
-  const handleScroll = () => {
-    const elementAboutMe = document.getElementById('aboutMe');
-
-    if (elementAboutMe && isElementVisible(elementAboutMe)) {
-      setAboutMeVisible(true);
-    }
-  };
-
-  const isElementVisible = (element) => {
-    const rect = element.getBoundingClientRect();
-    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-    const topOffset = -100;
-
-    return rect.top + topOffset < windowHeight && rect.bottom > 300;
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   useEffect(() => {
     const skills = document.querySelectorAll('.skills__li i');
 
@@ -38,23 +12,25 @@ const Aboutme = () => {
     });
   }, []);
   return (
-    <div
-      className="aboutMe__container"
-      style={{ opacity: aboutMeVisible ? 1 : 0, transition: 'opacity 1s ease' }}
-    >
-      <div className="aboutMe__date" id="aboutMe">
-        <h2>Sobre Mí</h2>
-        <p>
-          Hola, mi nombre es Emerson, pero mis amigos me llaman "Reizor". Soy una persona
-          autodidacta. Desde que conocí el mundo de la programación, se ha convertido en mi
-          pasatiempo favorito junto al deporte de contacto "mma".
-        </p>
-        <p>
-          Tengo excelentes habilidades de comunicación. Me encanta colaborar y trabajar en equipo.
-          Actualmente, estoy buscando un trabajo de tiempo completo como desarrollador full-stack ,
-          front-end o back-end.
-        </p>
-      </div>
+    <div className="aboutMe__container">
+      <section className="aboutMe__section-one" id="aboutMe">
+        <Player className="aboutMe__player" autoplay loop src="./aboutme.json">
+          <Controls visible={false} />
+        </Player>
+        <article className="aboutMe__date">
+          <h2>Sobre Mí</h2>
+          <p>
+            Hola, mi nombre es Emerson, pero mis amigos me llaman "Reizor". Soy una persona
+            autodidacta. Desde que conocí el mundo de la programación, se ha convertido en mi
+            pasatiempo favorito junto al deporte de contacto "mma".
+          </p>
+          <p>
+            Tengo excelentes habilidades de comunicación. Me encanta colaborar y trabajar en equipo.
+            Actualmente, estoy buscando un trabajo de tiempo completo como desarrollador full-stack
+            , front-end o back-end.
+          </p>
+        </article>
+      </section>
       <div className="skills" id="skill">
         <h2>Mis Habilidades</h2>
         <ul className="skills__ul">

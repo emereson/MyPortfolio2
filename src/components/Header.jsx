@@ -8,7 +8,7 @@ const Header = () => {
   const [skillVisible, setSkillVisible] = useState(false);
   const [projectsVisible, setProjectsVisible] = useState(false);
   const [contactMeVisible, setContactMeVisible] = useState(false);
-  const [showMenu, setshowMenu] = useState(true)
+  const [showMenu, setshowMenu] = useState(true);
 
   useEffect(() => {
     let timeoutId;
@@ -85,35 +85,79 @@ const Header = () => {
     };
   }, []);
 
-  const showClick =()=>{
-    setshowMenu(false)
-  }
+  const showClick = () => {
+    setshowMenu(false);
+  };
 
   return (
     <header className={`header ${scrolling ? 'scrolling-bg' : ''}`}>
-      <ul className={!showMenu?"headerUl__show":''}>
+      <ul className={!showMenu ? 'headerUl__show' : ''}>
         <li>
-          <a  onClick={() => { setshowMenu(true) }} className={homeVisible ? 'a__animacion' : 'header__a'} href="#home">Inicio</a>
+          <a
+            onClick={() => {
+              setshowMenu(true);
+            }}
+            className={'header__a'}
+            href="#home"
+          >
+            Inicio
+          </a>
         </li>
         <li>
-          <a  onClick={() => { setshowMenu(true) }} className={aboutMeVisible ? 'a__animacion' : 'header__a'} href="#aboutMe">Sobre Mí</a>
+          <a
+            onClick={() => {
+              setshowMenu(true);
+            }}
+            className={aboutMeVisible ? 'a__animacion' : 'header__a'}
+            href="#aboutMe"
+          >
+            Sobre Mí
+          </a>
         </li>
         <li>
-          <a  onClick={() => { setshowMenu(true) }} className={skillVisible ? 'a__animacion' : 'header__a'} href="#skill">Habilidades</a>
+          <a
+            onClick={() => {
+              setshowMenu(true);
+            }}
+            className={skillVisible ? 'a__animacion' : 'header__a'}
+            href="#skill"
+          >
+            Habilidades
+          </a>
         </li>
         <li>
-          <a onClick={() => { setshowMenu(true) }}  className={projectsVisible ? 'a__animacion' : 'header__a'} href="#projects">Proyectos</a>
+          <a
+            onClick={() => {
+              setshowMenu(true);
+            }}
+            className={projectsVisible ? 'a__animacion' : 'header__a'}
+            href="#projects"
+          >
+            Proyectos
+          </a>
         </li>
         <li>
-          <a  onClick={() => { setshowMenu(true) }} className={contactMeVisible ? 'a__animacion' : 'header__a'} href="#contacMe">Contáctame</a>
+          <a
+            onClick={() => {
+              setshowMenu(true);
+            }}
+            className={contactMeVisible ? 'a__animacion' : 'header__a'}
+            href="#contacMe"
+          >
+            Contáctame
+          </a>
         </li>
       </ul>
-      {
-        showMenu?
-        <i onClick={showClick} className='bx bx-menu'></i>
-        :
-      <i className='bx bxs-x-circle' onClick={() => { setshowMenu(true) }} ></i>
-      }
+      {showMenu ? (
+        <i onClick={showClick} className="bx bx-menu"></i>
+      ) : (
+        <i
+          className="bx bxs-x-circle"
+          onClick={() => {
+            setshowMenu(true);
+          }}
+        ></i>
+      )}
     </header>
   );
 };

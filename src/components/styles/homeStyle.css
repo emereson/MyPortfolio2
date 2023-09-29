@@ -1,46 +1,67 @@
 .home__container {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, rgb(1, 0, 13), rgb(1, 0, 31));
+  z-index: 1;
+  overflow-y: auto;
+  padding: 1em;
+}
+
+.home__article-one {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 20em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home__article-two {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.home__player {
+  width: 100%;
+  animation: home-player 6s forwards;
 }
 
 .home__date {
+  position: relative;
   margin: auto;
   width: 100%;
+  max-width: 55em;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   padding: 1em;
-  padding-top: 7em;
   z-index: 2;
   gap: 1.5em;
+  margin: 0;
 }
 .home__date h2 {
   width: 0;
-  height: auto;
-  font-size: 4em;
+  font-size: 3em;
   overflow: hidden;
   white-space: nowrap;
-  text-align: center;
   color: var(--body-white);
-  font-weight: 400;
-  animation: typing 6s steps(70) 1s 1 normal both;
+  font-weight: 800;
+  font-family: 'Martian Mono', monospace;
+  text-shadow: 0 0 0.1em var(--body-purple);
+  animation: typing 3s steps(70) 1s 1 normal both;
 }
-
-.home__date h3 {
-  width: 0;
-  font-size: 2.5em;
-  font-weight: 400;
-  text-align: center;
-  margin: 0.5em;
-  overflow: hidden;
-  white-space: nowrap;
-  color: var(--text-color-white);
-  animation: typing 3.7s steps(60) 4s 1 normal both;
-}
-
 @keyframes typing {
   from {
     width: 0;
@@ -50,47 +71,119 @@
     width: 100%;
   }
 }
-
-.home__player {
-  width: 40%;
-  animation: home-player 6s forwards;
+.home__date h3 {
+  position: relative;
+  font-size: 2.9em;
+  font-weight: 800;
+  text-align: center;
+  color: transparent;
+  -webkit-text-stroke: 0.02em var(--body-purple);
+  overflow: hidden;
+}
+.home__date h3::before {
+  content: 'Fullstack Developer';
+  position: absolute;
+  left: 0;
+  width: 0;
+  color: var(--body-purple);
+  overflow: hidden;
+  white-space: nowrap;
+  text-shadow: 0 0 0.05em var(--body-purple);
+  border-right: 0.05em solid var(--body-purple);
+  animation: move 3s steps(140) 4s normal both;
 }
 
-@keyframes home-player {
+@keyframes move {
   0% {
-    opacity: 0;
-    scale: 0;
+    width: 0;
   }
 
   100% {
-    opacity: 1;
-    scale: 1;
+    width: 100%;
   }
+}
+
+.home__date p {
+  color: var(--text-color-white);
+  font-size: 1.4em;
+  font-weight: 600;
+  animation: translate 4s steps(140) 4s normal both;
+}
+@keyframes translate {
+  0% {
+    opacity: 0;
+    transform: translateX(-200%);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home__a {
+  position: absolute;
+  bottom: -5em;
+
+  color: var(--body-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.3em;
+  font-weight: 800;
+  font-family: 'Martian Mono', monospace;
+  padding: 0.8em;
+  background-color: transparent;
+  border: 0.15em solid var(--body-white);
+  border-radius: 1em;
+  transition: 0.5s;
+}
+
+.home__a:hover {
+  border: 0.15em solid var(--body-purple);
+  transition: 0.5s;
+  color: var(--body-purple);
 }
 
 @media (max-width: 1000px) {
   .home__container {
-    min-height: 667px;
-    height: auto;
+    min-height: 100vh;
+    height: 100%;
+    align-items: center;
+  }
+  .home__article-one {
+    display: none;
+  }
+
+  .home__article-two {
+    flex-direction: column-reverse;
+    gap: 3em;
+  }
+  .home__date {
+    justify-content: center;
+    align-items: center;
   }
   .home__date h2 {
-    font-size: 1.5em;
+    font-size: 1.3em;
+    text-align: center;
   }
 
   .home__date h3 {
-    font-size: 1.15em;
-    animation: typing 4.7s steps(60) 4s 1 normal both;
+    font-size: 1.3em;
+    text-align: center;
+  }
+  .home__date p {
+    font-size: 1.2em;
+    text-align: center;
+  }
+  .home__a {
+    font-size: 1em;
   }
 
-  .homeDate__canvasContainer div {
-    pointer-events: none !important;
-  }
-  .homeDate__canvasContainer canvas {
-    min-width: 300px;
-    min-height: 300px !important;
-    padding-top: 4em;
-  }
   .home__player {
-    width: 35;
+    width: 70%;
   }
 }

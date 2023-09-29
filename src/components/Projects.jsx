@@ -20,7 +20,7 @@ const Projects = () => {
   const isElementVisible = (element) => {
     const rect = element.getBoundingClientRect();
     const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-    const topOffset = 500;
+    const topOffset = -100;
 
     return rect.top + topOffset < windowHeight && rect.bottom > 300;
   };
@@ -36,7 +36,7 @@ const Projects = () => {
   return (
     <div
       className="projects__container"
-      style={{ opacity: aboutMeVisible ? 1 : 0, transition: 'opacity 2s ease' }}
+      style={{ opacity: aboutMeVisible ? 1 : 0, transition: 'opacity 3s ease' }}
       id="projects"
     >
       <div className="projects__dates">
@@ -75,7 +75,7 @@ const Projects = () => {
           className="projects__oneProjects oneProjects2"
           style={{
             transform: showProjects ? 'translateX(0)' : '',
-            transition: 'transform 2s ease',
+            transition: 'transform 4s ease',
           }}
         >
           <div className="pojects__oldEfect"> </div>
@@ -123,7 +123,7 @@ const Projects = () => {
           className="projects__oneProjects oneProjects3"
           style={{
             transform: showProjects ? 'translateX(0)' : '',
-            transition: 'transform 1s ease',
+            transition: 'transform 5s ease',
           }}
         >
           <div className="pojects__oldEfect"> </div>
@@ -153,7 +153,48 @@ const Projects = () => {
           className="projects__oneProjects oneProjects4"
           style={{
             transform: showProjects ? 'translateX(0)' : '',
-            transition: 'transform 2s ease',
+            transition: 'transform 6s ease',
+          }}
+        >
+          <div className="pojects__oldEfect"> </div>
+          <img src="./alipio.png" alt="" />
+          <h3>Alipio Ponce </h3>
+          <p>
+            Esta pagina fue desarrollada para un Colegio en el cual el Director y los profesores
+            podran administrar las asistencias, notas, observaciones, exámenes y mensualidades
+            pendientes o ya pagadas de los estudiantes
+          </p>
+          <ul>
+            <li>#Node.js</li>
+            <li>#React.js</li>
+            <li>#PostgreSQL</li>
+          </ul>
+        </div>
+        <div
+          className="projects__oneProjects oneProjects4"
+          style={{
+            transform: showProjects ? 'translateX(0)' : '',
+            transition: 'transform 7s ease',
+          }}
+        >
+          <div className="pojects__oldEfect"> </div>
+          <img src="./policlinico.png" alt="" />
+          <h3>Poclinico</h3>
+          <p>
+            Esta pagina fue desarrollada para un policlinico de mi ciudad en el cual los pacientes
+            podran revisar sus ecografias y realizar consultas mediante la pagina web
+          </p>
+          <ul>
+            <li>#Nest.js</li>
+            <li>#Angular</li>
+            <li>#PostgreSQL</li>
+          </ul>
+        </div>
+        <div
+          className="projects__oneProjects oneProjects4"
+          style={{
+            transform: showProjects ? 'translateX(0)' : '',
+            transition: 'transform 8s ease',
           }}
         >
           <div className="pojects__oldEfect"> </div>

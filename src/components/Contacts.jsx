@@ -2,38 +2,8 @@ import React, { Suspense, useEffect, useState } from 'react';
 import './styles/contactStyle.css';
 
 const Contacts = () => {
-  const [aboutMeVisible, setAboutMeVisible] = useState(false);
-
-  const handleScroll = () => {
-    const elementAboutMe = document.getElementById('contacMe');
-
-    if (elementAboutMe && isElementVisible(elementAboutMe)) {
-      setAboutMeVisible(true);
-    }
-  };
-
-  const isElementVisible = (element) => {
-    const rect = element.getBoundingClientRect();
-    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-    const topOffset = 500;
-
-    return rect.top + topOffset < windowHeight && rect.bottom > 300;
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
-    <div
-      className="contact__container"
-      style={{ opacity: aboutMeVisible ? 1 : 0, transition: 'opacity 2s ease' }}
-      id="contacMe"
-    >
+    <div className="contact__container" id="contacMe">
       <div className="contact__date">
         <h2>Contactame</h2>
         <span>

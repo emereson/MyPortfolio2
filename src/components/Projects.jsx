@@ -34,11 +34,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <div
-      className="projects__container"
-      style={{ opacity: aboutMeVisible ? 1 : 0, transition: 'opacity 3s ease' }}
-      id="projects"
-    >
+    <div className="projects__container" id="projects">
       <div className="projects__dates">
         <h2>Mis Proyectos</h2>
         <span>
@@ -75,7 +71,7 @@ const Projects = () => {
           className="projects__oneProjects oneProjects2"
           style={{
             transform: showProjects ? 'translateX(0)' : '',
-            transition: 'transform 4s ease',
+            transition: 'transform 2s ease',
           }}
         >
           <div className="pojects__oldEfect"> </div>
@@ -123,7 +119,7 @@ const Projects = () => {
           className="projects__oneProjects oneProjects3"
           style={{
             transform: showProjects ? 'translateX(0)' : '',
-            transition: 'transform 5s ease',
+            transition: 'transform 3s ease',
           }}
         >
           <div className="pojects__oldEfect"> </div>
@@ -153,7 +149,7 @@ const Projects = () => {
           className="projects__oneProjects oneProjects4"
           style={{
             transform: showProjects ? 'translateX(0)' : '',
-            transition: 'transform 6s ease',
+            transition: 'transform 4s ease',
           }}
         >
           <div className="pojects__oldEfect"> </div>
@@ -174,7 +170,7 @@ const Projects = () => {
           className="projects__oneProjects oneProjects4"
           style={{
             transform: showProjects ? 'translateX(0)' : '',
-            transition: 'transform 7s ease',
+            transition: 'transform 5s ease',
           }}
         >
           <div className="pojects__oldEfect"> </div>
@@ -194,7 +190,7 @@ const Projects = () => {
           className="projects__oneProjects oneProjects4"
           style={{
             transform: showProjects ? 'translateX(0)' : '',
-            transition: 'transform 8s ease',
+            transition: 'transform 6s ease',
           }}
         >
           <div className="pojects__oldEfect"> </div>

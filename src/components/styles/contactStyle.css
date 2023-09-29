@@ -7,7 +7,7 @@
   align-items: center;
   gap: 4em;
   z-index: 2;
-  background: linear-gradient(180deg, rgb(2, 0, 17), var(--body-purpleBlack));
+  background: rgb(1, 1, 18);
 }
 
 .contact__canvas {

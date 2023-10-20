@@ -38,7 +38,7 @@ const Header = () => {
         <article className="headerLogo__articleOne">
           <span></span> <span></span>
         </article>
-        <Link>DotCode</Link>
+        <Link to="/">DotCode</Link>
         <article className="headerLogo__articleTwo">
           <span></span> <span></span>
         </article>

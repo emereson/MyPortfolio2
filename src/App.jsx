@@ -1,14 +1,13 @@
-import React, { lazy, Suspense, useState } from 'react';
+import React, { Suspense, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import './index.css';
 import Header from './components/Header';
-
-const LazyHome = lazy(() => import('./components/Home'));
-const LazyAboutme = lazy(() => import('./components/Aboutme'));
-const LazyServices = lazy(() => import('./components/Services'));
-const LazyPortfolio = lazy(() => import('./components/Portfolio'));
-const LazyContacts = lazy(() => import('./components/Contacts'));
+import Home from './components/Home';
+import Aboutme from './components/Aboutme';
+import Services from './components/Services';
+import Portfolio from './components/Portfolio';
+import Contacts from './components/Contacts';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -60,46 +59,11 @@ function App() {
         </div>
       </section>
       <Routes>
-        <Route
-          path="/"
-          element={
-            <Suspense>
-              <LazyHome />
-            </Suspense>
-          }
-        />
-        <Route
-          path="/aboutme"
-          element={
-            <Suspense>
-              <LazyAboutme />
-            </Suspense>
-          }
-        />
-        <Route
-          path="/services"
-          element={
-            <Suspense>
-              <LazyServices />
-            </Suspense>
-          }
-        />
-        <Route
-          path="/portfolio"
-          element={
-            <Suspense>
-              <LazyPortfolio />
-            </Suspense>
-          }
-        />
-        <Route
-          path="/contact-me"
-          element={
-            <Suspense>
-              <LazyContacts />
-            </Suspense>
-          }
-        />
+        <Route path="/" element={<Home />} />
+        <Route path="/aboutme" element={<Aboutme />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/contact-me" element={<Contacts />} />
       </Routes>
     </div>
   );

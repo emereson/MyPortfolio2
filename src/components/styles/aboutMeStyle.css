@@ -1,32 +1,32 @@
 .aboutMe__container {
-  width: 100%;
-  min-height: 160vh;
-  margin-top: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 77%;
+  min-height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: start;
   align-items: center;
-  gap: 3em;
-  background: rgb(1, 1, 18);
-  z-index: 2;
-  padding: 2em 1em 2em 1em;
+  gap: 4em;
+  background: var(--body-background);
+  z-index: 1;
+  overflow: hidden;
+  overflow-y: auto;
+  padding: 3em 0 3em 0;
 }
 .aboutMe__section-one {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 5em;
 }
-.aboutMe__player {
+
+.aboutMe__articleOne {
   width: 100%;
-  min-width: 15em;
-  max-width: 25em;
-}
-.aboutMe__date {
-  width: 100%;
-  max-width: 55em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,48 +34,177 @@
   gap: 3em;
 }
 
-.aboutMe__date h2 {
-  margin: auto;
+.aboutMe__articleOne h2 {
   position: relative;
-  font-size: 2.5em;
+  font-size: 1.8em;
   font-weight: 800;
-  color: var(--body-purple);
+  color: var(--text-color-white);
   text-shadow: 0 0 0.05em var(--body-purple);
   font-family: 'Martian Mono', monospace;
+  animation: translate 2s forwards;
 }
 
-.aboutMe__date h2::after {
+.aboutMe__articleOne h2::before {
   content: '';
   position: absolute;
-  bottom: -3px;
+  bottom: -0.3em;
   left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: var(--body-purple);
+  width: 40%;
+  height: 0.12em;
+  background-color: var(--text-color-red);
   transform: scaleX(1);
-  transition: transform 0.3s ease-in-out;
 }
 
-.aboutMe__date p {
-  text-align: center;
-  font-size: 1.5em;
-  font-weight: 500;
+.aboutMe__articleOne h2::after {
+  content: '';
+  position: absolute;
+  bottom: -0.7em;
+  left: 0;
+  width: 20%;
+  height: 0.12em;
+  background-color: var(--text-color-red);
+  transform: scaleX(1);
+}
+
+.aboutMe__articleOne p {
+  font-size: 1.2em;
+  font-weight: 400;
+  color: var(--text-color-p);
+  animation: translate 2s forwards;
+}
+.aboutMe__articleOne span {
+  color: var(--text-color-red);
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.3em;
+  font-weight: 800;
+}
+
+/* aboutMe__section-two */
+
+.aboutMe__section-two {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+  gap: 2em;
+}
+
+.aboutMeSectionTwo__article-one {
+  width: 55%;
+  min-width: 300px;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  gap: 3em;
+  margin-left: -1em;
+}
+
+.aboutMeSectionTwo__article-one ul {
+  width: 100%;
+  color: var(--text-color-white);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5em;
+  margin-left: -0.5em;
+}
+.aboutMeSectionTwo__article-one li {
+  width: 45%;
+  font-size: 1em;
+  font-weight: 600;
+  margin-left: 1em;
+  padding-bottom: 0.3em;
+  border-bottom: 0.08em solid var(--text-color-gray);
+  animation: translate 2s forwards;
+}
+.aboutMeSectionTwo__article-one span {
+  color: var(--text-color-p);
+  font-weight: 400;
+  font-size: 0.9em;
+  padding-left: 0.2em;
+}
+.aboutMeSectionTwo__buttons {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2em;
+}
+.aboutMeSectionTwo__buttons button {
+  position: relative;
+  color: var(--text-color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 0.8em;
+  font-weight: 800;
+  font-family: 'Martian Mono', monospace;
+  padding: 0.8em;
+  background-color: transparent;
+  border: 0.15em solid var(--text-color-red);
+  border-radius: 0.5em;
+  overflow: hidden;
+  transition: 0.5s;
+  cursor: pointer;
+  animation: translate 2s forwards;
+}
+
+.aboutMeSectionTwo__buttons button::before {
+  position: absolute;
+  content: '';
+  margin: auto;
+  width: 150%;
+  height: 200%;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--text-color-red);
+  transition: 1s ease;
+  transform: translateY(0) translateX(0);
+}
+
+.aboutMeSectionTwo__buttons button::after {
+  position: absolute;
+  content: '';
+  margin: auto;
+  width: 150%;
+  height: 200%;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--text-color-red);
+  transition: 1s ease;
+  transform: translateY(0) translateX(0);
+}
+
+.aboutMeSectionTwo__buttons button:hover::before {
+  transform: translateY(-80%) translateX(80%);
+  transition: 1s ease;
+}
+.aboutMeSectionTwo__buttons button:hover::after {
+  transform: translateY(80%) translateX(-80%);
+  transition: 1s ease;
+}
+
+.aboutMeSectionTwo__buttons a {
   color: var(--text-color-white);
 }
 .skills {
-  width: 100%;
+  width: 35% !important;
+  min-width: 300px;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  gap: 4em;
+  gap: 2em;
 }
 
 .skills h2 {
   position: relative;
-  font-size: 2.5em;
+  font-size: 1.2em;
   font-weight: 600;
-  color: var(--body-purple);
+  color: var(--text-color-white);
   font-family: 'Martian Mono', monospace;
 }
 
@@ -98,12 +227,13 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 4em;
+  gap: 1em;
 }
 
 .skills__li {
   min-width: 5em;
   width: 10%;
+  font-size: 0.6em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -115,12 +245,13 @@
       left top,
       left bottom,
       from(transparent),
-      to(rgba(0, 0, 0, 0.116))
+      to(rgba(0, 0, 0, 0.227))
     );
+  animation: translate 2s forwards;
 }
 
 .skills__li i {
-  font-size: 3.5em;
+  font-size: 5em;
   animation: rotate infinite linear;
 }
 
@@ -141,7 +272,7 @@
 }
 
 .html5 {
-  color: rgb(4, 46, 160);
+  color: rgb(0, 51, 191);
 }
 .css3 {
   color: rgb(188, 57, 0);
@@ -152,7 +283,7 @@
 }
 
 .angular {
-  color: rgb(159, 20, 20);
+  color: red;
 }
 
 .bootstrap {
@@ -173,10 +304,129 @@
 .php {
   color: blue;
 }
+.github {
+  color: var(--text-color-white);
+}
+.vuejs {
+  color: rgb(66, 175, 117);
+}
 
-@media (max-width: 1000px) {
+.java {
+  color: red;
+}
+
+/* .aboutMe__section-three */
+.aboutMe__section-three {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: start;
+  gap: 2em;
+  padding-top: 2em;
+}
+.aboutMe__educationContainer {
+  position: relative;
+  width: 45%;
+  min-width: 300px;
+  max-width: 600px;
+  background-color: var(--body-gray);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+.aboutMe__educationContainer h3 {
+  position: absolute;
+  font-size: 1.5em;
+  top: -2em;
+  color: var(--text-color-white);
+  animation: translate 2s forwards;
+}
+
+.aboutMe__educationContainer span {
+  position: absolute;
+  top: 1em;
+  bottom: 1em;
+  left: 1em;
+  height: 90%;
+  width: 0.1em;
+  background-color: var(--text-color-red);
+}
+.aboutMeEducation__data {
+  padding-left: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  padding-bottom: 2.5em;
+}
+
+.aboutMeEducationData__date {
+  position: relative;
+  color: var(--text-color-p);
+  font-size: 0.7em;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  animation: translate 2s forwards;
+}
+.aboutMeEducationData__date i {
+  font-size: 1.3em;
+}
+
+.aboutMeEducationData__date span {
+  top: 0;
+  left: -1.85em;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: var(--text-color-red);
+}
+
+.aboutMeEducation__data h4 {
+  color: var(--text-color-white);
+  font-size: 1.2em;
+}
+
+.aboutMeEducationData__p {
+  font-size: 0.85em;
+  color: var(--text-color-p);
+}
+@media (max-width: 900px) {
   .aboutMe__container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
     height: 100%;
+    padding-top: 6em;
+  }
+
+  .aboutMe__section-two {
+    justify-content: center;
+    align-items: center;
+  }
+  .aboutMeSectionTwo__article-one {
+    width: 100%;
+  }
+
+  .aboutMeSectionTwo__article-one ul {
+    width: 100%;
+    justify-content: center;
+  }
+  .aboutMeSectionTwo__article-one li {
+    width: 45%;
+    min-width: 200px;
+  }
+
+  .aboutMeSectionTwo__buttons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .aboutMe__educationContainer {
+    margin-top: 3em;
+    justify-content: center;
   }
   .skills {
     margin: 0;

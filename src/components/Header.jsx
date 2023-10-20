@@ -1,162 +1,102 @@
 import React, { useEffect, useState } from 'react';
 import './styles/headerStyle.css';
+import { ImHome } from 'react-icons/im';
+import { FaUser } from 'react-icons/fa6';
+import { FaList } from 'react-icons/fa6';
+import { BsPersonWorkspace } from 'react-icons/bs';
+import { AiFillMessage } from 'react-icons/ai';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
-  const [scrolling, setScrolling] = useState(false);
-  const [homeVisible, setHomeVisible] = useState(false);
-  const [aboutMeVisible, setAboutMeVisible] = useState(false);
-  const [skillVisible, setSkillVisible] = useState(false);
-  const [projectsVisible, setProjectsVisible] = useState(false);
-  const [contactMeVisible, setContactMeVisible] = useState(false);
-  const [showMenu, setshowMenu] = useState(true);
+  const location = useLocation();
+  const [locationLink, setlocationLink] = useState('/');
+  const [menuClose, setmenuClose] = useState(true);
 
   useEffect(() => {
-    let timeoutId;
+    const path = location.pathname;
 
-    const handleScroll = () => {
-      setScrolling(true);
+    if (path.includes('services')) {
+      setlocationLink('services');
+    } else if (path.includes('aboutme')) {
+      setlocationLink('aboutme');
+    } else if (path.includes('portfolio')) {
+      setlocationLink('portfolio');
+    } else if (path.includes('contact-me')) {
+      setlocationLink('contact-me');
+    } else {
+      setlocationLink('home');
+    }
+  }, [location.pathname]);
 
-      clearTimeout(timeoutId);
-
-      timeoutId = setTimeout(() => {
-        setScrolling(false);
-      }, 500); // Ajusta el tiempo en milisegundos según tus necesidades
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      clearTimeout(timeoutId);
-    };
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const elementHome = document.getElementById('home');
-      const elementAboutMe = document.getElementById('aboutMe');
-      const elementSkill = document.getElementById('skill');
-      const elementProjects = document.getElementById('projects');
-      const elementContactMe = document.getElementById('contacMe');
-
-      if (elementHome && isElementVisible(elementHome)) {
-        setHomeVisible(true);
-      } else {
-        setHomeVisible(false);
-      }
-
-      if (elementAboutMe && isElementVisible(elementAboutMe)) {
-        setAboutMeVisible(true);
-      } else {
-        setAboutMeVisible(false);
-      }
-
-      if (elementSkill && isElementVisible(elementSkill)) {
-        setSkillVisible(true);
-      } else {
-        setSkillVisible(false);
-      }
-
-      if (elementProjects && isElementVisible(elementProjects)) {
-        setProjectsVisible(true);
-      } else {
-        setProjectsVisible(false);
-      }
-
-      if (elementContactMe && isElementVisible(elementContactMe)) {
-        setContactMeVisible(true);
-      } else {
-        setContactMeVisible(false);
-      }
-    };
-
-    const isElementVisible = (element) => {
-      const rect = element.getBoundingClientRect();
-      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-      const topOffset = 500;
-
-      return rect.top + topOffset < windowHeight && rect.bottom > 300;
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  const showClick = () => {
-    setshowMenu(false);
+  const toggleMenuClose = () => {
+    setmenuClose(!menuClose);
   };
 
   return (
-    <header className={`header ${scrolling ? 'scrolling-bg' : ''}`}>
-      <ul className={!showMenu ? 'headerUl__show' : ''}>
+    <header className="header">
+      <section className="header__logo">
+        <article className="headerLogo__articleOne">
+          <span></span> <span></span>
+        </article>
+        <Link>DotCode</Link>
+        <article className="headerLogo__articleTwo">
+          <span></span> <span></span>
+        </article>
+      </section>
+      <ul className={`header__ul  ${menuClose ? 'headerUl__show' : ''}`}>
         <li>
-          <a
-            onClick={() => {
-              setshowMenu(true);
-            }}
-            className={'header__a'}
-            href="#home"
+          <Link
+            to="/"
+            className={locationLink === 'home' ? 'activeLink' : ''}
+            onClick={toggleMenuClose}
           >
-            Inicio
-          </a>
+            <ImHome /> Inicio
+          </Link>
         </li>
         <li>
-          <a
-            onClick={() => {
-              setshowMenu(true);
-            }}
-            className={aboutMeVisible ? 'a__animacion' : 'header__a'}
-            href="#aboutMe"
+          <Link
+            to="/aboutme"
+            className={locationLink === 'aboutme' ? 'activeLink' : ''}
+            onClick={toggleMenuClose}
           >
-            Sobre Mí
-          </a>
+            <FaUser /> Sobre Mí
+          </Link>
         </li>
         <li>
-          <a
-            onClick={() => {
-              setshowMenu(true);
-            }}
-            className={skillVisible ? 'a__animacion' : 'header__a'}
-            href="#skill"
+          <Link
+            to="/services"
+            className={locationLink === 'services' ? 'activeLink' : ''}
+            onClick={toggleMenuClose}
           >
-            Habilidades
-          </a>
+            <FaList />
+            Servicios
+          </Link>
         </li>
         <li>
-          <a
-            onClick={() => {
-              setshowMenu(true);
-            }}
-            className={projectsVisible ? 'a__animacion' : 'header__a'}
-            href="#projects"
+          <Link
+            to="/portfolio"
+            className={locationLink === 'portfolio' ? 'activeLink' : ''}
+            onClick={toggleMenuClose}
           >
-            Proyectos
-          </a>
+            <BsPersonWorkspace />
+            Portafolio
+          </Link>
         </li>
         <li>
-          <a
-            onClick={() => {
-              setshowMenu(true);
-            }}
-            className={contactMeVisible ? 'a__animacion' : 'header__a'}
-            href="#contacMe"
+          <Link
+            to="/contact-me"
+            className={locationLink === 'contact-me' ? 'activeLink' : ''}
+            onClick={toggleMenuClose}
           >
+            <AiFillMessage />
             Contáctame
-          </a>
+          </Link>
         </li>
       </ul>
-      {showMenu ? (
-        <i onClick={showClick} className="bx bx-menu"></i>
+      {menuClose ? (
+        <i className="bx bx-menu menuclose" onClick={toggleMenuClose}></i>
       ) : (
-        <i
-          className="bx bxs-x-circle"
-          onClick={() => {
-            setshowMenu(true);
-          }}
-        ></i>
+        <i className="bx bxs-x-circle menuclose" onClick={toggleMenuClose}></i>
       )}
     </header>
   );

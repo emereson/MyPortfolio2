@@ -1,96 +1,224 @@
 .contact__container {
-  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 77%;
   min-height: 100vh;
+  height: 100%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: start;
   align-items: center;
-  gap: 4em;
-  z-index: 2;
-  background: rgb(1, 1, 18);
+  background: var(--body-background);
+  z-index: 1;
+  overflow: hidden;
+  overflow-y: auto;
+  gap: 2em;
+  padding: 3em 0 3em 0;
+}
+.contact__section-one {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 3em;
 }
 
-.contact__canvas {
-  width: 100%;
-  max-width: 35em;
-  height: 40em;
+.contact__section-one h2 {
+  position: relative;
+  font-size: 1.8em;
+  font-weight: 800;
+  color: var(--text-color-white);
+  text-shadow: 0 0 0.05em var(--body-purple);
+  font-family: 'Martian Mono', monospace;
+  animation: translate 2s forwards;
+}
+
+.contact__section-one h2::before {
+  content: '';
+  position: absolute;
+  bottom: -0.3em;
+  left: 0;
+  width: 40%;
+  height: 0.12em;
+  background-color: var(--text-color-red);
+  transform: scaleX(1);
+}
+
+.contact__section-one h2::after {
+  content: '';
+  position: absolute;
+  bottom: -0.7em;
+  left: 0;
+  width: 20%;
+  height: 0.12em;
+  background-color: var(--text-color-red);
+  transform: scaleX(1);
+}
+
+.contact__section-one p {
+  color: var(--text-color-p);
+  animation: translate 2s forwards;
+}
+
+/* contact__section-two */
+.contact__section-two {
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.contact__date {
-  width: 100%;
-  max-width: 35em;
+
+.contact__section-two ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  padding: 1em;
+}
+
+.contact__section-two a {
+  color: var(--text-color-red);
+  font-size: 2em;
+  border-radius: 50%;
+  padding: 0.15em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease;
+  animation: translate 2s forwards;
+}
+
+.contact__section-two a:hover {
+  background-color: var(--text-color-red);
+  color: var(--text-color-white);
+  transition: 0.5s ease;
+}
+
+/* .contact__section-three  */
+.contact__section-three {
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1em;
 }
 
-.contact__date h2 {
-  font-size: 2.5em;
-  font-weight: 800;
-  color: var(--body-purple);
-  text-shadow: 0 0 0.05em var(--body-purple);
-  font-family: 'Martian Mono', monospace;
-}
-
-.contact__date span {
-  text-align: center;
-  font-size: 1.35em;
+.contact__section-three h3 {
   color: var(--text-color-white);
-  font-weight: 600;
-  padding: 1em;
+  animation: translate 2s forwards;
 }
 
-.contact__date ul {
-  position: relative;
-  z-index: 10;
-  padding-top: 4em;
+.contact__section-three form {
+  width: 100%;
+  max-width: 700px;
   display: flex;
   flex-wrap: wrap;
-  gap: 2em;
+  justify-content: center;
+  align-items: center;
+}
+.contact__section-three div {
+  padding: 1.5em 1em 0em 1em;
+  width: 45%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  animation: translate 2s forwards;
+}
+.contact__section-three label {
+  color: var(--text-color-red);
+  font-weight: 500;
+  font-size: 1.2em;
 }
 
-.contact__date li {
-  width: 3em;
-  height: 3em;
-  border-radius: 50%;
-  background-color: var(--body-purpleBlack);
+.contact__section-three input {
+  width: 100%;
+  font-size: 1em;
+  color: var(--text-color-p);
+  background-color: var(--body-gray);
+  border: none;
+  border-radius: 1em;
+  padding: 0.3em 0em 0.3em 1em;
+}
+
+.contact__section-three textarea {
+  width: 100%;
+  height: 8em;
+  font-size: 1em;
+  color: var(--text-color-p);
+  background-color: var(--body-gray);
+  border: none;
+  border-radius: 1em;
+  padding: 0.3em 0em 0.3em 1em;
+}
+
+.contactSectionThree__button {
+  width: auto;
+  margin: auto;
+  position: relative;
+  color: var(--text-color-white);
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.5s;
+  gap: 0.5em;
+  font-size: 0.7em;
+  font-weight: 800;
+  font-family: 'Martian Mono', monospace;
+  padding: 0.8em;
+  background-color: transparent;
+  border: 0.15em solid var(--text-color-red);
+  border-radius: 0.5em;
+  overflow: hidden;
   cursor: pointer;
-}
-.contact__date li:hover {
-  background-color: var(--body-purple);
-  transition: 0.5s;
-}
-.contact__date li a {
-  color: var(--body-purple);
-  transition: 0.5s;
-}
-.contact__date li a:hover {
-  color: var(--body-white);
   transition: 0.5s;
 }
 
-.contact__date i {
-  font-size: 2em;
+.contactSectionThree__button::before {
+  position: absolute;
+  content: '';
+  margin: auto;
+  width: 150%;
+  height: 200%;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--text-color-red);
+  transition: 1s ease;
+  transform: translateY(-80%) translateX(80%);
 }
 
-@media (max-width: 1000px) {
+.contactSectionThree__button::after {
+  position: absolute;
+  content: '';
+  margin: auto;
+  width: 150%;
+  height: 200%;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--text-color-red);
+  transition: 1s ease;
+  transform: translateY(80%) translateX(-80%);
+}
+
+.contactSectionThree__button:hover::before {
+  transform: translateY(0) translateX(0);
+  transition: 1s ease;
+}
+.contactSectionThree__button:hover::after {
+  transform: translateY(0) translateX(0);
+  transition: 1s ease;
+}
+
+@media (max-width: 900px) {
   .contact__container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
     height: 100%;
-    padding: 0.5em;
-    padding-top: 5em;
-    padding-bottom: 2em;
-  }
-  .contact__date h2 {
-    font-size: 2em;
-  }
-  .contact__date span {
-    font-size: 1em;
+    padding-top: 6em;
   }
 }

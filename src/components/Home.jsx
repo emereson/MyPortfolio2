@@ -1,33 +1,55 @@
-import React from 'react';
-import { Controls, Player } from '@lottiefiles/react-lottie-player';
+import React, { useEffect, useState } from 'react';
 import './styles/homeStyle.css';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
+  const services = [
+    'Desarrollador Web',
+    'Programador Web',
+    'Diseñador Web',
+    'Programador de Sistemas',
+    'Programador de Aplicaciones',
+  ];
+
+  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentServiceIndex((prevIndex) => (prevIndex + 1) % services.length);
+    }, 4000);
+    return () => clearInterval(intervalId);
+  }, [services.length]);
+
+  const currentService = services[currentServiceIndex];
   return (
     <div className="home__container" id="home">
-      <article className="home__article-one">
-        <Player className="moon__player" autoplay loop src="./moon.json">
-          <Controls visible={false} />
-        </Player>
-      </article>
-
-      <article className="home__article-two">
-        <Player className="home__player" autoplay loop src="./home.json">
-          <Controls visible={false} />
-        </Player>
+      <section className="home__section-one">
         <div className="home__date">
-          <h2>Hola, soy Emerson Wilson</h2>
-          <h3>Fullstack Developer</h3>
+          <h2 className="homeDate__h2">
+            Hola, mi nombre es <span>Emerson Wilson</span>
+          </h2>
+          <h3 className="homeDate__h3">
+            Soy <span>{currentService}</span>
+          </h3>
 
           <p>
-            Desarrollador web Full Stack apasionado por la tecnología, preparado para afrontar con
-            entusiasmo los desafíos que el fascinante mundo de la programación me presenta.
+            Apasionado por la tecnología, me encuentro preparado para enfrentar con entusiasmo los
+            desafíos que el fascinante mundo de la programación me ofrece.
           </p>
-          <a className="home__a" href="#aboutMe">
-            Sobre Mí <i class="bx bxs-chevron-down"></i>
-          </a>
+          <Link className="home__link" to="/aboutme">
+            Sobre Mí <i className="bx bxs-chevron-down"></i>
+          </Link>
         </div>
-      </article>
+      </section>
+      <section className="home__section-two">
+        <article className="homeSectionTwo__articleOne">
+          <span></span> <span></span>
+        </article>
+        <img src="./home.png" alt="" />
+        <article className="homeSectionTwo__articleTwo">
+          <span></span> <span></span>
+        </article>
+      </section>
     </div>
   );
 };

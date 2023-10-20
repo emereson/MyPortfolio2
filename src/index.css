@@ -1,44 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Martian+Mono:wght@100;200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script:wght@400;500;600;700&family=Martian+Mono:wght@100;200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 * {
   box-sizing: border-box;
 }
 
+:root {
+  --body-background: rgb(10, 10, 10);
+  --body-white: #eeeeee;
+  --body-gray: rgb(28, 28, 28);
+  --text-color-white: #f5f5f5;
+  --text-color-gray: rgba(96, 96, 96, 0.465);
+  --text-color-p: rgb(213, 213, 213);
+}
+
+.light-mode {
+  --body-background: rgb(228, 240, 242);
+  --body-gray: rgb(255, 255, 255);
+  --text-color-white: #0a0a0c;
+  --text-color-p: rgb(47, 48, 52);
+}
+
+.theme__red {
+  --text-color-red: #dc3128;
+}
+
+.theme__orange {
+  --text-color-red: #f26d00;
+}
+
+.theme__green {
+  --text-color-red: #16af6d;
+}
+
+.theme__blue {
+  --text-color-red: #0022aa;
+}
+
+.theme__pink {
+  --text-color-red: #b20e8c;
+}
+
 *::-webkit-scrollbar {
-  width: 7px;
+  width: 0.4em;
 }
 
 *::-webkit-scrollbar-track {
-  background: rgb(2, 4, 14);
+  background: var(--body-background);
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #26132a;
-  border-radius: 0px;
+  background-color: var(--text-color-red);
+  border-radius: 5px;
 }
-
-:root {
-  --body-white: #eeeeee;
-  --body-purple: #6f3685;
-  --body-purpleBlack: #0d0310;
-  --body-gray: #717171;
-  --text-color-white: #e7deec;
-  --text-color-beigh: rgb(161, 155, 121);
-  --text-color-gold: #5c5443;
-}
-
 body {
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
   width: 100%;
   height: 100%;
   min-width: 360px;
-  background-color: rgb(4, 4, 4);
 }
 
 h1,
 h2,
 h3,
+h4,
 p,
 ul {
   margin-top: 0;

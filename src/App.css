@@ -55,11 +55,76 @@
   }
 }
 
-@media (max-width: 800px) {
-  .app_container {
-    padding-top: 4em;
-  }
-  .loading__player {
-    width: 80vw;
+.app__modeColor {
+  width: 2em;
+  overflow: hidden;
+  height: auto;
+  position: fixed;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1em;
+  z-index: 5;
+  right: 1%;
+  top: 10%;
+  color: var(--text-color-white);
+  transform: translateX(0);
+  transition: 0.7s ease;
+}
+
+.activeThemeColor {
+  width: 12em;
+  transition: 0.7s ease;
+}
+.app__modeColor i {
+  padding: 0.2em;
+  cursor: pointer;
+  font-size: 1.4em;
+  background-color: var(--body-gray);
+  border-radius: 50%;
+}
+.appModeColor__iconsContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0.8em;
+}
+
+.appModeColor__themeColors {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 0.8em;
+  align-items: start;
+  font-size: 1.1em;
+  font-weight: 600;
+  background-color: var(--body-gray);
+  padding: 0.5em;
+  border-radius: 0.3em;
+}
+
+.appModeColor__themeColors ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3em;
+}
+
+.appModeColor__themeColors li {
+  width: 1.1em;
+  height: 1.1em;
+  border-radius: 50%;
+  background-color: aliceblue;
+  cursor: pointer;
+}
+
+@media (max-height: 450px) {
+  .app__modeColor {
+    top: 6em;
+    right: 1em;
   }
 }

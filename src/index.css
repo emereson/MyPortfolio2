@@ -13,7 +13,7 @@
 }
 
 .light-mode {
-  --body-background: rgb(228, 240, 242);
+  --body-background: rgb(236, 236, 236);
   --body-gray: rgb(255, 255, 255);
   --text-color-white: #0a0a0c;
   --text-color-p: rgb(47, 48, 52);

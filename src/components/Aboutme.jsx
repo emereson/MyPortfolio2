@@ -23,12 +23,12 @@ const Aboutme = () => {
         <article className="aboutMe__articleOne">
           <h2>Sobre Mí</h2>
           <p>
-            ¡Saludos! Soy <span>Emerson</span>, aunque puedes llamarme <span>"Reizor"</span>. Me
-            sumerjo con pasión en el fascinante mundo de la programación como autodidacta, donde la
-            creatividad y el código van de la mano. Además, me encanta el trabajo en equipo,
-            colaborar para alcanzar objetivos comunes. Cuando no estoy explorando el vasto terreno
-            digital, me entrego con igual pasión a los deportes de contacto, con una inclinación
-            especial por el MMA.
+            ¡Saludos! Soy <span>Emerson</span>, un apasionado desarrollador con destacadas
+            habilidades de comunicación y colaboración. Estoy en búsqueda de una posición a tiempo
+            completo como front-end developer, back-end developer o full-stack developer, donde
+            pueda aplicar mi experiencia para contribuir al éxito del equipo. Mi objetivo es
+            continuar creciendo profesionalmente mientras aporto al desarrollo de soluciones
+            innovadoras.
           </p>
         </article>
       </section>
@@ -187,14 +187,32 @@ const Aboutme = () => {
             <p className="aboutMeEducationData__date">
               <span></span>
               <i className="bx bxs-calendar"></i>
+              2017 - 2021
+            </p>
+            <h4>Ruaska </h4>
+            <p className="aboutMeEducationData__p">
+              Mi experiencia en esta fábrica textil inició como limpiador, pero a lo largo del
+              tiempo, demostré habilidades en el manejo de maquinaria textil, destacando mi
+              capacidad para aprender rápidamente y adaptarme al entorno laboral. Después de dos
+              años, fui ascendido a supervisor y diseñador. En mi rol como supervisor, mantuve una
+              relación positiva con mis compañeros, contribuyendo a un ambiente de trabajo
+              armonioso. Aunque inicialmente enfrenté desafíos en el diseño, superé estas
+              dificultades mediante un aprendizaje rápido, descubriendo así mi pasión por la
+              programación.
+            </p>
+          </div>
+          <div className="aboutMeEducation__data">
+            <p className="aboutMeEducationData__date">
+              <span></span>
+              <i className="bx bxs-calendar"></i>
               2022 - 2023
             </p>
             <h4>Experiencia como Freelance</h4>
             <p className="aboutMeEducationData__p">
-              Aunque no tengo experiencia laboral en empresas, he dedicado un año completo a
-              trabajar como freelance, desarrollando diversos proyectos para mis clientes. Esta
-              experiencia me ha permitido perfeccionar mis habilidades y abordar desafíos de manera
-              creativa y efectiva.
+              Aunque no tengo experiencia en empresas de TI o marketing, he desarrollado habilidades
+              significativas como freelance developer, trabajando en la creación de páginas web,
+              sitios web, aplicaciones web, sistemas de ventas, entre otros. Esta experiencia me ha
+              permitido superar los desafíos y percances que surgen en cada proyecto.
             </p>
           </div>
         </article>

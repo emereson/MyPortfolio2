@@ -50,7 +50,10 @@ const Contacts = () => {
             </a>
           </li>
           <li>
-            <a href="https://wa.link/ohedux" target="_blank">
+            <a
+              href="https://api.whatsapp.com/send/?phone=51927482386&text=¡Hola%2C+buenos+días%21+Estoy+en+busca+de+servicios+de+programación+y+me+preguntaba+si+podrías+ayudarme.+&type=phone_number&app_absent=0"
+              target="_blank"
+            >
               <i className="bx bxl-whatsapp"></i>
             </a>
           </li>

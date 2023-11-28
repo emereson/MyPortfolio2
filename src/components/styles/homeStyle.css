@@ -40,6 +40,7 @@
   gap: 1.5em;
   margin: 0;
 }
+
 .homeDate__h2 {
   width: 100%;
   display: flex;
@@ -52,8 +53,9 @@
   font-weight: 800;
   font-family: 'Martian Mono', monospace;
   text-shadow: 0 0 0.1em var(--body-purple);
-  animation: translate 2s forwards;
+  animation: translate 1s forwards;
 }
+
 .homeDate__h2 span {
   display: block;
   width: auto;
@@ -62,6 +64,7 @@
   font-weight: 800;
   font-size: 1.3em;
 }
+
 .homeDate__h3 {
   position: relative;
   width: auto;
@@ -71,7 +74,7 @@
   font-weight: 800;
   color: var(--text-color-white);
   overflow: hidden;
-  animation: translate 2s forwards;
+  animation: translate 1s forwards;
 }
 
 .homeDate__h3 span {
@@ -91,6 +94,7 @@
   60% {
     width: 100%;
   }
+
   100% {
     width: 0;
   }
@@ -100,13 +104,15 @@
   color: var(--text-color-p);
   font-size: 1.2em;
   font-weight: 400;
-  animation: translate 2s forwards;
+  animation: translate 1s forwards;
 }
+
 @keyframes translate {
   0% {
     opacity: 0;
     transform: translateY(30%) translatex(15%);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0) translatex(0);
@@ -140,7 +146,7 @@
   border-radius: 50%;
   z-index: -1;
   background-color: var(--text-color-red);
-  transition: 1s ease;
+  transition: 0.5s ease;
   transform: translateY(-80%) translateX(80%);
 }
 
@@ -153,17 +159,18 @@
   border-radius: 50%;
   z-index: -1;
   background-color: var(--text-color-red);
-  transition: 1s ease;
+  transition: 0.5s ease;
   transform: translateY(80%) translateX(-80%);
 }
 
 .home__link:hover::before {
   transform: translateY(0) translateX(0);
-  transition: 1s ease;
+  transition: 0.5s ease;
 }
+
 .home__link:hover::after {
   transform: translateY(0) translateX(0);
-  transition: 1s ease;
+  transition: 0.5s ease;
 }
 
 .home__section-two {
@@ -175,7 +182,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  animation: translate 2s forwards, logo 2s forwards;
+  animation: translate 1s forwards, logo 1s forwards;
 }
 
 .home__section-two img {
@@ -183,6 +190,7 @@
   height: 85%;
   object-fit: cover;
 }
+
 .homeSectionTwo__articleOne {
   position: relative;
   width: 100%;
@@ -230,6 +238,7 @@
   height: 7em;
   background-color: var(--text-color-red);
 }
+
 @media (max-width: 900px) {
   .home__container {
     position: fixed;
@@ -241,6 +250,7 @@
     padding-top: 6em;
     gap: 4em;
   }
+
   .home__article-one {
     display: none;
   }
@@ -249,10 +259,12 @@
     flex-direction: column-reverse;
     gap: 3em;
   }
+
   .home__date {
     justify-content: center;
     align-items: center;
   }
+
   .home__date h2 {
     font-size: 1.3em;
     text-align: center;
@@ -262,10 +274,12 @@
     font-size: 1.3em;
     text-align: center;
   }
+
   .home__date p {
     font-size: 1.2em;
     text-align: center;
   }
+
   .home__a {
     font-size: 1em;
   }

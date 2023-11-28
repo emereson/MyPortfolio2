@@ -16,6 +16,7 @@
   gap: 2em;
   padding: 3em 0 3em 0;
 }
+
 .contact__section-one {
   width: 90%;
   display: flex;
@@ -59,7 +60,7 @@
 
 .contact__section-one p {
   color: var(--text-color-p);
-  animation: translate 2s forwards;
+  animation: translate 1s forwards;
 }
 
 /* contact__section-two */
@@ -87,7 +88,7 @@
   justify-content: center;
   align-items: center;
   transition: 0.5s ease;
-  animation: translate 2s forwards;
+  animation: translate 1s forwards;
 }
 
 .contact__section-two a:hover {
@@ -108,7 +109,7 @@
 
 .contact__section-three h3 {
   color: var(--text-color-white);
-  animation: translate 2s forwards;
+  animation: translate 1s forwards;
 }
 
 .contact__section-three form {
@@ -119,6 +120,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .contact__section-three div {
   padding: 1.5em 1em 0em 1em;
   width: 45%;
@@ -126,8 +128,9 @@
   display: flex;
   flex-direction: column;
   gap: 0.3em;
-  animation: translate 2s forwards;
+  animation: translate 1s forwards;
 }
+
 .contact__section-three label {
   color: var(--text-color-red);
   font-weight: 500;
@@ -185,7 +188,7 @@
   border-radius: 50%;
   z-index: -1;
   background-color: var(--text-color-red);
-  transition: 1s ease;
+  transition: 0.5s ease;
   transform: translateY(-80%) translateX(80%);
 }
 
@@ -198,17 +201,20 @@
   border-radius: 50%;
   z-index: -1;
   background-color: var(--text-color-red);
-  transition: 1s ease;
+  transition: 0.5s ease;
   transform: translateY(80%) translateX(-80%);
 }
 
 .contactSectionThree__button:hover::before {
   transform: translateY(0) translateX(0);
-  transition: 1s ease;
+  transition: 0.5s ease;
+
 }
+
 .contactSectionThree__button:hover::after {
   transform: translateY(0) translateX(0);
-  transition: 1s ease;
+  transition: 0.5s ease;
+
 }
 
 @media (max-width: 900px) {

@@ -27,7 +27,7 @@
   justify-content: center;
   align-items: center;
   font-size: 2.3em;
-  animation: logo 2s forwards;
+  animation: logo 1s forwards;
   overflow: hidden;
 }
 
@@ -46,13 +46,15 @@
   font-size: 1.2em;
   font-weight: 800;
   color: var(--text-color-white);
-  animation: translate 2s forwards;
+  animation: translate 1s forwards;
   transition: 0.5s ease;
 }
+
 .header__logo a:hover {
   color: var(--text-color-red);
   transition: 0.5s ease;
 }
+
 .headerLogo__articleOne {
   position: relative;
   width: 100%;
@@ -110,10 +112,12 @@
   align-items: center;
   gap: 2.5em;
 }
+
 .header__ul li {
   width: 100%;
-  animation: translate 2s forwards;
+  animation: translate 1s forwards;
 }
+
 .header__ul a {
   width: 90%;
   max-width: 170px;
@@ -137,6 +141,7 @@
 .activeLink {
   color: var(--text-color-red) !important;
 }
+
 .menuclose {
   display: none;
 }
@@ -150,6 +155,7 @@
     justify-content: space-between;
     overflow: hidden;
   }
+
   .header__logo {
     width: 2.8em !important;
     min-height: 1em !important;
@@ -185,6 +191,7 @@
     color: var(--text-color-white);
     font-size: 1.8em;
   }
+
   .header__ul {
     position: fixed;
     top: 4em;
@@ -223,6 +230,7 @@
     padding-bottom: 8em;
     overflow-y: auto;
   }
+
   .headerUl__show {
     transform: translateX(100%);
     transition: 0.7s ease;

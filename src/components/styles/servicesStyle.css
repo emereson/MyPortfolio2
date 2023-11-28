@@ -33,7 +33,7 @@
   color: var(--text-color-white);
   text-shadow: 0 0 0.05em var(--body-purple);
   font-family: 'Martian Mono', monospace;
-  animation: translate 2s forwards;
+  animation: translate 1s forwards;
 }
 
 .services__section-one h2::before {
@@ -57,6 +57,7 @@
   background-color: var(--text-color-red);
   transform: scaleX(1);
 }
+
 /* .services__section-two */
 .services__section-two {
   width: 100%;
@@ -78,12 +79,13 @@
   gap: 1em;
   padding: 1em;
   border-radius: 0.5em;
-  animation: translate 2s forwards;
+  animation: translate 1s forwards;
 }
 
 .servicesSectionOne__article path {
   stroke: var(--text-color-red);
 }
+
 .servicesSectionOne__article i {
   color: var(--text-color-red);
   font-size: 3em;

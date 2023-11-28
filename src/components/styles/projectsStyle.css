@@ -33,7 +33,7 @@
   color: var(--text-color-white);
   text-shadow: 0 0 0.05em var(--body-purple);
   font-family: 'Martian Mono', monospace;
-  animation: translate 2s forwards;
+  animation: translate 1s forwards;
 }
 
 .portfolio__section-one h2::before {
@@ -62,7 +62,7 @@
   font-size: 1.2em;
   font-weight: 400;
   color: var(--text-color-p);
-  animation: translate 2s forwards;
+  animation: translate 1s forwards;
 }
 
 /* .portfolio__section  */
@@ -81,7 +81,7 @@
   border-radius: 0.3em;
   overflow: hidden;
   background-color: var(--body-gray);
-  animation: translate 2s forwards;
+  animation: translate 1s forwards;
 }
 
 .portfolioProject__img {
@@ -93,6 +93,7 @@
   align-items: center;
   z-index: 1;
 }
+
 .portfolioProject__img img {
   width: 100%;
   height: 100%;
@@ -112,16 +113,17 @@
   z-index: 2;
   background-color: var(--body-gray);
   opacity: 0;
-  transition: 1s ease;
+  transition: 0.5s ease;
 }
+
 .portfolioProject__data:hover {
   opacity: 1;
-  transition: 1s ease;
+  transition: 0.5s ease;
 }
 
 .portfolioProject__data h3 {
   color: var(--text-color-white);
-  font-size: 1 em;
+  font-size: 1em;
 }
 
 .portfolioProject__data p {
@@ -157,7 +159,7 @@
   border-radius: 50%;
   z-index: -1;
   background-color: var(--text-color-red);
-  transition: 1s ease;
+  transition: 0.5s ease;
   transform: translateY(-80%) translateX(80%);
 }
 
@@ -170,17 +172,18 @@
   border-radius: 50%;
   z-index: -1;
   background-color: var(--text-color-red);
-  transition: 1s ease;
+  transition: 0.5s ease;
   transform: translateY(80%) translateX(-80%);
 }
 
 .portfolioProject__link:hover::before {
   transform: translateY(0) translateX(0);
-  transition: 1s ease;
+  transition: 0.5s ease;
 }
+
 .portfolioProject__link:hover::after {
   transform: translateY(0) translateX(0);
-  transition: 1s ease;
+  transition: 0.5s ease;
 }
 
 @media (max-width: 900px) {

@@ -2,18 +2,13 @@ import React, { useEffect } from 'react';
 import './styles/projectsStyle.css';
 import { useState } from 'react';
 import axios from 'axios';
+import projects from '../../projects.json';
 
 const Portfolio = () => {
-  const [projects, setprojects] = useState();
-
-  useEffect(() => {
-    const url = `${import.meta.env.VITE_URL_API}/project`;
-
-    axios
-      .get(url)
-      .then((res) => setprojects(res.data))
-      .catch((err) => console.log(err));
-  }, []);
+  const [viewGif, setviewGif] = useState(false);
+  setTimeout(() => {
+    setviewGif(true);
+  }, 3000);
 
   return (
     <div className="portfolio__container">
@@ -28,16 +23,28 @@ const Portfolio = () => {
       </section>
 
       <section className="portfolio__section-two">
-        {projects?.projects.map((project) => (
+        {projects?.map((project) => (
           <article className="portfolio__project" key={project.id}>
-            <div className="portfolioProject__img">
-              <img src={project.projectImg} alt="" />
+            <div className="portfotlioProjec__img">
+              <img src={project.projectImg} alt={project.title} />
+              <img
+                src={project.projectGif}
+                alt={project.title}
+                className="portfotlioProjec__img__viewGif"
+                style={viewGif ? { opacity: '1' } : {}}
+              />
             </div>
             <div className="portfolioProject__data">
               <h3>{project.title}</h3>
               <p>{project.description}</p>
-              {project.linkPage === '1' ? (
-                <span></span>
+              {project.linkPage === null ? (
+                <a
+                  href={`https://api.whatsapp.com/send/?phone=51927482386&text=¡Hola, buenos días! Acabo de ver su portafolio y estoy interesado en ver el demo de ${project.title}.&type=phone_number&app_absent=0`}
+                  target="_blank"
+                  className="portfolioProject__link"
+                >
+                  Solicitar Demo
+                </a>
               ) : (
                 <a href={project.linkPage} target="_blank" className="portfolioProject__link">
                   ver pagina

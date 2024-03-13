@@ -88,6 +88,10 @@ const Aboutme = () => {
               <i className="bx bxl-react"></i>
               <span>React js</span>
             </li>
+            <li className="skills__li postgresql">
+              <i className="bx bxl-flutter"></i>
+              <span>Flutter</span>
+            </li>
             <li className="skills__li angular">
               <i className="bx bxl-angular"></i>
               <span>Angular</span>

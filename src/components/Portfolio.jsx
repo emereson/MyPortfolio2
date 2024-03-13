@@ -8,7 +8,7 @@ const Portfolio = () => {
   const [viewGif, setviewGif] = useState(false);
   setTimeout(() => {
     setviewGif(true);
-  }, 3000);
+  }, 2000);
 
   return (
     <div className="portfolio__container">

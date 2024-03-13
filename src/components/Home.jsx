@@ -25,12 +25,12 @@ const Home = () => {
     <div className="home__container" id="home">
       <section className="home__section-one">
         <div className="home__date">
-          <h2 className="homeDate__h2">
+          <h1 className="homeDate__h2">
             Hola, mi nombre es <span>Emerson Wilson</span>
-          </h2>
-          <h3 className="homeDate__h3">
+          </h1>
+          <h2 className="homeDate__h3">
             Soy <span>{currentService}</span>
-          </h3>
+          </h2>
 
           <p>
             Apasionado por la tecnología, me encuentro preparado para enfrentar con entusiasmo los

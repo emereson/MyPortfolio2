@@ -43,8 +43,6 @@ function App() {
 
   return (
     <>
-      <Header />
-
       <section className={` app__modeColor  ${activeThemeColor ? 'activeThemeColor' : ''}`}>
         <div className="appModeColor__iconsContainer">
           <i className="bx bxs-cog bx-spin" onClick={toggleActiveThemeMode}></i>
@@ -65,6 +63,9 @@ function App() {
           </ul>
         </div>
       </section>
+
+      <Header />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/aboutme" element={<Aboutme />} />

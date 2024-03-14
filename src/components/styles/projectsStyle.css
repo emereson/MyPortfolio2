@@ -188,11 +188,15 @@
 
 @media (max-width: 900px) {
   .portfolio__container {
-
     width: 100%;
     min-height: 100vh;
     height: 100%;
     padding: 1em;
     padding-top: 6em;
+  }
+
+  .portfolio__project {
+    width: 100%;
+
   }
 }

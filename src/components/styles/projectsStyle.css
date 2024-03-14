@@ -1,20 +1,17 @@
 .portfolio__container {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 77%;
+  width: 100%;
   min-height: 100vh;
   height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: start;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  gap: 4em;
   background: var(--body-background);
   z-index: 1;
   overflow: hidden;
   overflow-y: auto;
-  padding: 3em 0 3em 0;
+  gap: 4em;
+  padding: 3em 1em 3em 23%;
 }
 
 .portfolio__section-one {
@@ -195,6 +192,7 @@
     width: 100%;
     min-height: 100vh;
     height: 100%;
+    padding: 1em;
     padding-top: 6em;
   }
 }

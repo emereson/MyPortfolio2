@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import './index.css';
@@ -21,10 +21,30 @@ function App() {
   const toggleActiveThemeMode = () => {
     setactiveThemeColor(!activeThemeColor);
   };
+  useEffect(() => {
+    // Se ejecutará cada vez que darkMode o fontColor cambie
+    document.body.className = `app_container ${darkMode ? 'light-mode' : ''} ${
+      fontColor === 'red'
+        ? 'theme__red'
+        : fontColor === 'orange'
+        ? 'theme__orange'
+        : fontColor === 'green'
+        ? 'theme__green'
+        : fontColor === 'blue'
+        ? 'theme__blue'
+        : 'theme__pink'
+    }`;
+
+    // Función de limpieza para eliminar las clases cuando el componente se desmonta
+    return () => {
+      document.body.className = '';
+    };
+  }, [darkMode, fontColor]); // Dependencias del efecto
 
   return (
     <>
-      <Header darkMode={darkMode} fontColor={fontColor} />
+      <Header />
+
       <section className={` app__modeColor  ${activeThemeColor ? 'activeThemeColor' : ''}`}>
         <div className="appModeColor__iconsContainer">
           <i className="bx bxs-cog bx-spin" onClick={toggleActiveThemeMode}></i>
@@ -45,27 +65,13 @@ function App() {
           </ul>
         </div>
       </section>
-      <div
-        className={`app_container ${darkMode ? 'light-mode' : ''} ${
-          fontColor === 'red'
-            ? 'theme__red'
-            : fontColor === 'orange'
-            ? 'theme__orange'
-            : fontColor === 'green'
-            ? 'theme__green'
-            : fontColor === 'blue'
-            ? 'theme__blue'
-            : 'theme__pink'
-        }`}
-      >
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/aboutme" element={<Aboutme />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/contact-me" element={<Contacts />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/aboutme" element={<Aboutme />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/contact-me" element={<Contacts />} />
+      </Routes>
     </>
   );
 }

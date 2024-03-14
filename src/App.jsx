@@ -23,7 +23,7 @@ function App() {
   };
   useEffect(() => {
     // Se ejecutará cada vez que darkMode o fontColor cambie
-    document.body.className = `app_container ${darkMode ? 'light-mode' : ''} ${
+    document.body.className = ` ${darkMode ? 'light-mode' : ''} ${
       fontColor === 'red'
         ? 'theme__red'
         : fontColor === 'orange'

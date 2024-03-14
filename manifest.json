@@ -4,7 +4,6 @@
   "description": "¡Hola! Soy Emerson, un apasionado programador y desarrollador web. ¿Necesitas dar vida a una aplicación móvil, sitio web impactante, sistema eficiente, punto de venta dinámico, o incluso añadir inteligencia artificial a tu plataforma? ¡No busques más! Estoy aquí para convertir tus ideas en realidad. ¡Contáctame hoy mismo y llevemos tu proyecto al siguiente nivel!",
   "display": "standalone",
   "start_url": "./index.html",
-
   "background_color": "#ffffff",
   "theme_color": "#000000",
   "prefer_related_applications": false,

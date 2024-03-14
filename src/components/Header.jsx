@@ -79,7 +79,7 @@ const Header = () => {
             onClick={toggleMenuClose}
           >
             <BsPersonWorkspace />
-            Portafolio
+            Proyectos
           </Link>
         </li>
         <li>

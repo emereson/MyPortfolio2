@@ -7,7 +7,7 @@ import { BsPersonWorkspace } from 'react-icons/bs';
 import { AiFillMessage } from 'react-icons/ai';
 import { Link, useLocation } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({ darkMode, fontColor }) => {
   const location = useLocation();
   const [locationLink, setlocationLink] = useState('/');
   const [menuClose, setmenuClose] = useState(true);
@@ -33,7 +33,19 @@ const Header = () => {
   };
 
   return (
-    <header className="header">
+    <header
+      className={`header ${darkMode ? 'light-mode' : ''} ${
+        fontColor === 'red'
+          ? 'theme__red'
+          : fontColor === 'orange'
+          ? 'theme__orange'
+          : fontColor === 'green'
+          ? 'theme__green'
+          : fontColor === 'blue'
+          ? 'theme__blue'
+          : 'theme__pink'
+      }`}
+    >
       <section className="header__logo">
         <article className="headerLogo__articleOne">
           <span></span> <span></span>

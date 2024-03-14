@@ -1,12 +1,3 @@
-.app_container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(45deg, rgb(1, 0, 13), rgb(1, 0, 31));
-}
-
 .app__img {
   width: 100%;
   height: 100%;
@@ -14,12 +5,14 @@
   z-index: -1;
   top: 0;
 }
+
 .app__img span {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.472);
 }
+
 .app__img img {
   width: 100%;
   height: 100%;
@@ -47,9 +40,11 @@
   0% {
     opacity: 1;
   }
+
   80% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -76,6 +71,7 @@
   width: 12em;
   transition: 0.7s ease;
 }
+
 .app__modeColor i {
   padding: 0.2em;
   cursor: pointer;
@@ -83,6 +79,7 @@
   background-color: var(--body-gray);
   border-radius: 50%;
 }
+
 .appModeColor__iconsContainer {
   height: 100%;
   display: flex;

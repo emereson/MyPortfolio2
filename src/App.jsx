@@ -24,9 +24,9 @@ function App() {
 
   return (
     <>
-      <div></div>
+      <Header darkMode={darkMode} fontColor={fontColor} />
       <div
-        className={`app_container ${darkMode ? 'light-mode' : ''} ${
+        className={` ${darkMode ? 'light-mode' : ''} ${
           fontColor === 'red'
             ? 'theme__red'
             : fontColor === 'orange'
@@ -38,7 +38,6 @@ function App() {
             : 'theme__pink'
         }`}
       >
-        <Header />
         <section className={` app__modeColor  ${activeThemeColor ? 'activeThemeColor' : ''}`}>
           <div className="appModeColor__iconsContainer">
             <i className="bx bxs-cog bx-spin" onClick={toggleActiveThemeMode}></i>

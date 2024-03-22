@@ -13,7 +13,7 @@
     "description": "Este es un proyecto personal, es una página donde podrás ver todos los tráilers o adelantos de la película o serie que te interese, cuenta con la opción de buscar y filtrar la serie que desees por su nombre o género.",
     "linkPage": "https://dulcet-cucurucho-90d923.netlify.app",
     "projectImg": "/netflyx.jpg",
-    "projectGif": "/netflyx.gif"
+    "projectGif": "/netflyx.jpg"
   },
   {
     "id": 3,
@@ -35,7 +35,7 @@
     "description": "Plataforma de comercio electrónico diseñada para productos individuales, donde la descarga del producto se realiza automáticamente tras completar la compra.",
     "linkPage": "https://mbharmonyplanner.com/",
     "projectImg": "/mb.png",
-    "projectGif": "/mb.gif"
+    "projectGif": "/mb.png"
   },
   {
     "id": 6,
@@ -43,7 +43,7 @@
     "description": "Página web exclusiva y cautivadora diseñada para destacar el excepcional trabajo de un talentoso fotógrafo. Explora un portafolio lleno de videos e imágenes únicas y encantadoras que capturan momentos inolvidables.",
     "linkPage": "https://henrygilweddings.com/#/",
     "projectImg": "/henrygil.png",
-    "projectGif": "/henrygil.gif"
+    "projectGif": "/henrygil.png"
   },
   {
     "id": 7,
@@ -51,7 +51,7 @@
     "description": " El Sistema de Control de Alumnos ofrece una plataforma integral para gestionar pagos, asistencia, exámenes y observaciones de los alumnos, brindando un control completo sobre su rendimiento y participación en la institución educativa.",
     "linkPage": null,
     "projectImg": "/ap.png",
-    "projectGif": "/ap.gif"
+    "projectGif": "/ap.png"
   },
   {
     "id": 8,
@@ -59,6 +59,6 @@
     "description": "¡CREATIVE ART VIDEO! Un espacio digital diseñado para el talentoso camarógrafo y maestro de eventos. Aquí, tu cliente podrá dar vida a su arte, compartiendo sus videos e imágenes más cautivadores y sorprendentes. ¡Es el escaparate perfecto para mostrar su trabajo al mundo!",
     "linkPage": "https://creativeartvideo.com/",
     "projectImg": "/cav.png",
-    "projectGif": "/cav.gif"
+    "projectGif": "/cav.png"
   }
 ]

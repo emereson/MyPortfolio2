@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import './styles/projectsStyle.css';
 import { useState } from 'react';
-import axios from 'axios';
 import projects from '../../projects.json';
+import ReactPlayer from 'react-player';
 
 const Portfolio = () => {
   const [viewGif, setviewGif] = useState(false);
@@ -27,11 +27,15 @@ const Portfolio = () => {
           <article className="portfolio__project" key={project.id}>
             <div className="portfotlioProjec__img">
               <img src={project.projectImg} alt={project.title} />
-              <img
-                src={project.projectGif}
-                alt={project.title}
-                className="portfotlioProjec__img__viewGif"
-                style={viewGif ? { opacity: '1' } : {}}
+              <ReactPlayer
+                className="portfolioProject__img__viewGif"
+                playing={true}
+                volume={0}
+                url={`./${project.projectGif}`}
+                loop={true}
+                width="100%"
+                height="200px"
+                style={viewGif ? { opacity: '1' } : { opacity: '0' }} // Se agrega el else y se cierra la llave
               />
             </div>
             <div className="portfolioProject__data">

@@ -47,9 +47,7 @@ const Aboutme = () => {
             <li>
               Freelance: <span>Disponible</span>
             </li>
-            <li>
-              Trabajo: <span>Buscando 😢</span>
-            </li>
+
             <li>
               Email: <span>emerson@idotcode.com</span>
             </li>
@@ -174,13 +172,15 @@ const Aboutme = () => {
             <p className="aboutMeEducationData__date">
               <span></span>
               <i className="bx bxs-calendar"></i>
-              2020 - 2023
+              2022 - 2023
             </p>
-            <h4>Ingeniería de Software</h4>
-            <p className="aboutMeEducationData__p">
-              Mi carrera técnica en Ingeniería de Software quedó inconclusa debido a problemas en mi
-              país. A lo largo de la experiencia, adquirí habilidades en análisis de datos y
-              desarrollo de aplicaciones con Java, Python, C++, entre otros.
+            <h4>Autodidacta</h4>
+            <p class="aboutMeEducationData__p">
+              Mi pasión por la programación me llevó a convertirme en un autodidacta. Después de
+              adquirir conocimientos en bootcamps, decidí expandir mis habilidades aprendiendo
+              múltiples lenguajes de programación. Me especializo en el desarrollo de aplicaciones
+              web y móviles, donde puedo demostrar mis habilidades a través de los proyectos y
+              trabajos que realizo para mis clientes.
             </p>
           </div>
         </article>

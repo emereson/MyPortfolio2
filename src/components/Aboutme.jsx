@@ -42,7 +42,7 @@ const Aboutme = () => {
               País: <span>Perú</span>
             </li>
             <li>
-              Ciudad: <span>Juliaca</span>
+              Ciudad: <span>Arequipa</span>
             </li>
             <li>
               Freelance: <span>Disponible</span>

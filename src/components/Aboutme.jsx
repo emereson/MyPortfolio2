@@ -187,24 +187,7 @@ const Aboutme = () => {
         <article className="aboutMe__educationContainer">
           <h3>Experiencia</h3>
           <span></span>
-          <div className="aboutMeEducation__data">
-            <p className="aboutMeEducationData__date">
-              <span></span>
-              <i className="bx bxs-calendar"></i>
-              2017 - 2021
-            </p>
-            <h4>Ruaska </h4>
-            <p className="aboutMeEducationData__p">
-              Mi experiencia en esta fábrica textil inició como limpiador, pero a lo largo del
-              tiempo, demostré habilidades en el manejo de maquinaria textil, destacando mi
-              capacidad para aprender rápidamente y adaptarme al entorno laboral. Después de dos
-              años, fui ascendido a supervisor y diseñador. En mi rol como supervisor, mantuve una
-              relación positiva con mis compañeros, contribuyendo a un ambiente de trabajo
-              armonioso. Aunque inicialmente enfrenté desafíos en el diseño, superé estas
-              dificultades mediante un aprendizaje rápido, descubriendo así mi pasión por la
-              programación.
-            </p>
-          </div>
+
           <div className="aboutMeEducation__data">
             <p className="aboutMeEducationData__date">
               <span></span>

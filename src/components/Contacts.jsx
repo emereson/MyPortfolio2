@@ -13,7 +13,7 @@ const Contacts = () => {
     console.log(formRef.current); // Verifica si esto imprime el formulario HTML en la consola
 
     emailjs
-      .sendForm('service_6rv1qdl', 'template_jklu78m', form, '_3jiepsyN18d8ZuGd')
+      .sendForm('service_4jm7prj', 'template_jklu78m', form, '_3jiepsyN18d8ZuGd')
       .then((result) => {
         form.reset();
         toast('💌 El Correo se envio exitosamente 📩', {

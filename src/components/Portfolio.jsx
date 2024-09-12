@@ -1,14 +1,21 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './styles/projectsStyle.css';
 import { useState } from 'react';
-import projects from '../../projects.json';
-import ReactPlayer from 'react-player';
+import freelans from '../jsons/freelans.json';
+import projects from '../jsons/projects.json';
+import useIntersectionObserverOnResize from '../hook/useIntersectionObserverOnResize';
 
 const Portfolio = () => {
-  const [viewGif, setviewGif] = useState(false);
-  setTimeout(() => {
-    setviewGif(true);
-  }, 2000);
+  useIntersectionObserverOnResize('Projects_sliderPrin1');
+  useIntersectionObserverOnResize('Projects_sliderPrin2');
+  const [viewProyects, setviewProyects] = useState(false);
+
+  freelans.forEach((free) => {
+    useIntersectionObserverOnResize(free.title);
+  });
+  projects.forEach((free) => {
+    useIntersectionObserverOnResize(free.title);
+  });
 
   return (
     <div className="portfolio__container">
@@ -22,41 +29,99 @@ const Portfolio = () => {
         </p>
       </section>
 
-      <section className="portfolio__section-two">
-        {projects?.map((project) => (
-          <article className="portfolio__project" key={project.id}>
-            <div className="portfotlioProjec__img">
-              <img src={project.projectImg} alt={project.title} />
-              <ReactPlayer
-                className="portfolioProject__img__viewGif"
-                playing={true}
-                volume={0}
-                url={`./${project.projectGif}`}
-                loop={true}
-                width="100%"
-                height="200px"
-                style={viewGif ? { opacity: '1' } : { opacity: '0' }} // Se agrega el else y se cierra la llave
+      <section className="Project_sectionTwo">
+        <h2>
+          <i class="bx bx-code-alt"></i> Proyectos
+        </h2>
+        <div className="Project_sectionTwo_buttons">
+          <button
+            className={`Project_sectionTwo_button ${
+              viewProyects ? '' : 'Project_sectionTwo_activeButton'
+            }`}
+            onClick={() => setviewProyects(false)}
+          >
+            Freelance
+          </button>
+          <button
+            className={`Project_sectionTwo_button ${
+              !viewProyects ? '' : 'Project_sectionTwo_activeButton'
+            }`}
+            onClick={() => setviewProyects(true)}
+          >
+            {' '}
+            Personales
+          </button>
+        </div>
+        <div className="Project_sectionTwo_cardsContainer">
+          {projects?.map((project) => (
+            <article
+              className="Project_sectionTwo_card"
+              key={project.id}
+              id={project.title}
+              style={{ display: viewProyects ? 'flex' : 'none' }}
+            >
+              <img
+                className="Project_sectionTwo_card_img"
+                src={project.projectImg}
+                alt={project.title}
               />
-            </div>
-            <div className="portfolioProject__data">
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              {project.linkPage === null ? (
-                <a
-                  href={`https://api.whatsapp.com/send/?phone=51927482386&text=¡Hola, buenos días! Acabo de ver su portafolio y estoy interesado en ver el demo de ${project.title}.&type=phone_number&app_absent=0`}
-                  target="_blank"
-                  className="portfolioProject__link"
-                >
-                  Solicitar Demo
-                </a>
-              ) : (
-                <a href={project.linkPage} target="_blank" className="portfolioProject__link">
-                  ver pagina
-                </a>
-              )}
-            </div>
-          </article>
-        ))}
+              <div className="Project_sectionTwo_card_dataContainer">
+                <div className="Project_sectionTwo_card_data_text">
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                </div>
+                {project.linkPage === null ? (
+                  <a
+                    href={`https://api.whatsapp.com/send/?phone=51927482386&text=¡Hola, buenos días! Acabo de ver su portafolio y estoy interesado en ver el demo de ${project.title}.&type=phone_number&app_absent=0`}
+                    target="_blank"
+                    className="portfolioProject__link"
+                  >
+                    Solicitar Demo
+                  </a>
+                ) : (
+                  <a href={project.linkPage} target="_blank" className="portfolioProject__link">
+                    ver pagina
+                  </a>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+        <div className="Project_sectionTwo_cardsContainer">
+          {freelans?.map((project) => (
+            <article
+              className="Project_sectionTwo_card"
+              key={project.id}
+              id={project.title}
+              style={{ display: !viewProyects ? 'flex' : 'none' }}
+            >
+              <img
+                className="Project_sectionTwo_card_img"
+                src={project.projectImg}
+                alt={project.title}
+              />
+              <div className="Project_sectionTwo_card_dataContainer">
+                <div className="Project_sectionTwo_card_data_text">
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                </div>
+                {project.linkPage === null ? (
+                  <a
+                    href={`https://api.whatsapp.com/send/?phone=51927482386&text=¡Hola, buenos días! Acabo de ver su portafolio y estoy interesado en ver el demo de ${project.title}.&type=phone_number&app_absent=0`}
+                    target="_blank"
+                    className="portfolioProject__link"
+                  >
+                    Solicitar Demo
+                  </a>
+                ) : (
+                  <a href={project.linkPage} target="_blank" className="portfolioProject__link">
+                    ver pagina
+                  </a>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
       </section>
     </div>
   );

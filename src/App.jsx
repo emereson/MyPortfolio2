@@ -73,6 +73,13 @@ function App() {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact-me" element={<Contacts />} />
       </Routes>
+      <a
+        className="icon_whatsapp"
+        href="https://api.whatsapp.com/send/?phone=51927482386&text=¡Hola%2C+buenos+días%21+Estoy+en+busca+de+servicios+de+programación+y+me+preguntaba+si+podrías+ayudarme.+&type=phone_number&app_absent=0"
+        target="_blank"
+      >
+        <img src="/whatsapp.png" alt="contactame por whatsApp" />
+      </a>
     </>
   );
 }

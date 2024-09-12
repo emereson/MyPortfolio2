@@ -36,7 +36,7 @@ const Aboutme = () => {
         <article className="aboutMeSectionTwo__article-one">
           <ul>
             <li>
-              Edad: <span>23 años</span>
+              Edad: <span>24 años</span>
             </li>
             <li>
               País: <span>Perú</span>
@@ -49,10 +49,7 @@ const Aboutme = () => {
             </li>
 
             <li>
-              Email: <span>emerson@idotcode.com</span>
-            </li>
-            <li>
-              Número: <span>+51 927 482 386</span>
+              Email: <span>escanorrosa123@gmail.com</span>
             </li>
             <li>
               Whatsapp: <span>+51 927 482 386</span>
@@ -145,13 +142,17 @@ const Aboutme = () => {
             <p className="aboutMeEducationData__date">
               <span></span>
               <i className="bx bxs-calendar"> </i>
-              2022 - 2023
+              2018 - 2023
             </p>
-            <h4>Bootcamp en Academlo</h4>
+            <h4>Ingeniería de Sistemas</h4>
             <p className="aboutMeEducationData__p">
-              En el transcurso de este bootcamp, culminé mi formación como desarrollador full-stack.
-              Durante el programa, adquirí habilidades en el desarrollo de aplicaciones y páginas
-              web utilizando tecnologías como React.js y Node.js.
+              Durante mi formación en Ingeniería de Software, adquirí una sólida comprensión de los
+              principios y metodologías para el desarrollo de software de calidad. Aprendí a
+              diseñar, implementar y mantener sistemas complejos, utilizando tanto tecnologías
+              backend como frontend. También desarrollé habilidades en la gestión de proyectos,
+              metodologías ágiles, y la colaboración en equipos multidisciplinarios. Esta
+              experiencia me ha permitido abordar problemas de software de manera estructurada, con
+              un enfoque en la eficiencia, la escalabilidad y la seguridad.
             </p>
           </div>
           <div className="aboutMeEducation__data">
@@ -160,7 +161,7 @@ const Aboutme = () => {
               <i className="bx bxs-calendar"></i>
               2022 - 2023
             </p>
-            <h4>Bootcamp en Platzi</h4>
+            <h4>Bootcamp en Academlo</h4>
             <p className="aboutMeEducationData__p">
               Durante este bootcamp, obtuve mi graduación como desarrollador full-stack, donde
               adquirí conocimientos para desarrollar aplicaciones y páginas web utilizando Angular y
@@ -192,7 +193,7 @@ const Aboutme = () => {
             <p className="aboutMeEducationData__date">
               <span></span>
               <i className="bx bxs-calendar"></i>
-              2022 - 2023
+              2023 - 2024
             </p>
             <h4>Experiencia como Freelance</h4>
             <p className="aboutMeEducationData__p">

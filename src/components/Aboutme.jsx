@@ -144,7 +144,7 @@ const Aboutme = () => {
               <i className="bx bxs-calendar"> </i>
               2018 - 2023
             </p>
-            <h4>Ingeniería de Sistemas</h4>
+            <h4>Ingeniería de Software</h4>
             <p className="aboutMeEducationData__p">
               Durante mi formación en Ingeniería de Software, adquirí una sólida comprensión de los
               principios y metodologías para el desarrollo de software de calidad. Aprendí a

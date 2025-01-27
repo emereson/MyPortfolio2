@@ -3,13 +3,7 @@ import './styles/homeStyle.css';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
-  const services = [
-    'Desarrollador Web',
-    'Programador Web',
-    'Diseñador Web',
-    'Programador de Sistemas',
-    'Programador de Aplicaciones',
-  ];
+  const services = ['Programador Web', 'Programador de Sistemas', 'Programador de Aplicaciones'];
 
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
 

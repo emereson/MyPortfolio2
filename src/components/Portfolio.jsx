@@ -31,7 +31,7 @@ const Portfolio = () => {
 
       <section className="Project_sectionTwo">
         <h2>
-          <i class="bx bx-code-alt"></i> Proyectos
+          <i className="bx bx-code-alt"></i> Proyectos
         </h2>
         <div className="Project_sectionTwo_buttons">
           <button

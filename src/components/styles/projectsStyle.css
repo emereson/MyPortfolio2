@@ -115,7 +115,8 @@
 .Project_sectionTwo_card {
   position: relative;
   width: 100%;
-  max-width: 380px;
+  max-width: 450px;
+  min-height: 450px;
   max-height: 550px;
   display: flex;
   flex-direction: column;

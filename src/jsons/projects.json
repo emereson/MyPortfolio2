@@ -26,5 +26,13 @@
     "description": "Un proyecto de comercio electrónico sencillo, desarrollado con HTML, CSS y JavaScript, que demuestra una interfaz de usuario intuitiva y funcionalidades básicas de tienda en línea.",
     "linkPage": "https://papaya-churros-625437.netlify.app/#",
     "projectImg": "/projects/Ecoomerce.png"
+  },
+  {
+    "id": 5,
+    "title": "SISTEMA DE FACTURACIÓN ELECTRONICA",
+    "description": "Descubra nuestro avanzado sistema de facturación diseñado para simplificar la gestión de su negocio. Emita facturas y boletas con facilidad, administre el registro completo de clientes y productos, y controle sus ingresos y salidas con un historial detallado. Además, genere reportes personalizados, cotizaciones profesionales y lleve un kardex preciso. Todo lo que necesita para optimizar su operación, en un solo lugar.",
+    "linkPage": "https://snazzy-cobbler-f29feb.netlify.app/",
+    "projectImg": "/projects/factu.png",
+    "projectGif": "/factu.png"
   }
 ]

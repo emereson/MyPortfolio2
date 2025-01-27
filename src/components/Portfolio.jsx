@@ -70,20 +70,20 @@ const Portfolio = () => {
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
                 </div>
-                {project.linkPage === null ? (
-                  <a
-                    href={`https://api.whatsapp.com/send/?phone=51927482386&text=¡Hola, buenos días! Acabo de ver su portafolio y estoy interesado en ver el demo de ${project.title}.&type=phone_number&app_absent=0`}
-                    target="_blank"
-                    className="portfolioProject__link"
-                  >
-                    Solicitar Demo
-                  </a>
-                ) : (
-                  <a href={project.linkPage} target="_blank" className="portfolioProject__link">
-                    ver pagina
-                  </a>
-                )}
               </div>
+              {project.linkPage === null ? (
+                <a
+                  href={`https://api.whatsapp.com/send/?phone=51929895265&text=¡Hola, buenos días! Acabo de ver su portafolio y estoy interesado en ver el demo de ${project.title}.&type=phone_number&app_absent=0`}
+                  target="_blank"
+                  className="portfolioProject__link"
+                >
+                  Solicitar Demo
+                </a>
+              ) : (
+                <a href={project.linkPage} target="_blank" className="portfolioProject__link">
+                  ver pagina
+                </a>
+              )}
             </article>
           ))}
         </div>
@@ -105,20 +105,20 @@ const Portfolio = () => {
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
                 </div>
-                {project.linkPage === null ? (
-                  <a
-                    href={`https://api.whatsapp.com/send/?phone=51927482386&text=¡Hola, buenos días! Acabo de ver su portafolio y estoy interesado en ver el demo de ${project.title}.&type=phone_number&app_absent=0`}
-                    target="_blank"
-                    className="portfolioProject__link"
-                  >
-                    Solicitar Demo
-                  </a>
-                ) : (
-                  <a href={project.linkPage} target="_blank" className="portfolioProject__link">
-                    ver pagina
-                  </a>
-                )}
               </div>
+              {project.linkPage === null ? (
+                <a
+                  href={`https://api.whatsapp.com/send/?phone=51929895265&text=¡Hola, buenos días! Acabo de ver su portafolio y estoy interesado en ver el demo de ${project.title}.&type=phone_number&app_absent=0`}
+                  target="_blank"
+                  className="portfolioProject__link"
+                >
+                  Solicitar Demo
+                </a>
+              ) : (
+                <a href={project.linkPage} target="_blank" className="portfolioProject__link">
+                  ver pagina
+                </a>
+              )}
             </article>
           ))}
         </div>

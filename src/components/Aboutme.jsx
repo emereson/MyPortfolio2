@@ -36,7 +36,7 @@ const Aboutme = () => {
         <article className="aboutMeSectionTwo__article-one">
           <ul>
             <li>
-              Edad: <span>24 años</span>
+              Edad: <span>25 años</span>
             </li>
             <li>
               País: <span>Perú</span>
@@ -52,7 +52,7 @@ const Aboutme = () => {
               Email: <span>escanorrosa123@gmail.com</span>
             </li>
             <li>
-              Whatsapp: <span>+51 927 482 386</span>
+              Whatsapp: <span>+51 929 895 265</span>
             </li>
           </ul>
           <div className="aboutMeSectionTwo__buttons">
@@ -193,7 +193,7 @@ const Aboutme = () => {
             <p className="aboutMeEducationData__date">
               <span></span>
               <i className="bx bxs-calendar"></i>
-              2023 - 2024
+              2023 - 2025
             </p>
             <h4>Experiencia como Freelance</h4>
             <p className="aboutMeEducationData__p">

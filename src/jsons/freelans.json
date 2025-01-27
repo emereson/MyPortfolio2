@@ -41,24 +41,26 @@
   },
   {
     "id": 5,
-    "title": "POLICLINICO",
-    "description": "Este proyecto fue desarrollado para un policlínico local. Permite al administrador ver la lista de pacientes por fecha, buscar pacientes por número de identificación y visualizar informes médicos y ecografías",
-    "linkPage": null,
-    "projectImg": "https://firebasestorage.googleapis.com/v0/b/blog-app-974e2.appspot.com/o/projectImg%2F1703854782508-polyclinic.png?alt=media&token=2e59e2bb-0a38-4b3e-bb04-c2dc51baa95a"
-  },
-  {
-    "id": 6,
-    "title": "Aquí Estoy",
-    "description": "Esta plataforma para clínicas veterinarias simplifica el acceso a la información de mascotas mediante escaneo de QR en los collares. Ofrece detalles y ubicación actual a través de la geolocalización de Google Maps, con la opción de compartir la ubicación.",
-    "linkPage": null,
-    "projectImg": "https://firebasestorage.googleapis.com/v0/b/blog-app-974e2.appspot.com/o/projectImg%2F1703853775955-qrPet.png?alt=media&token=10a27762-2521-4006-b745-162c23991ca2"
-  },
-  {
-    "id": 7,
     "title": "ALIPIO PONCE",
     "description": " El Sistema de Control de Alumnos ofrece una plataforma integral para gestionar pagos, asistencia, exámenes y observaciones de los alumnos, brindando un control completo sobre su rendimiento y participación en la institución educativa.",
     "linkPage": null,
     "projectImg": "/projects/ap.png",
     "projectGif": "/ap.png"
+  },
+  {
+    "id": 6,
+    "title": "SISTEMA DE FACTURACIÓN",
+    "description": "Descubra nuestro avanzado sistema de facturación diseñado para simplificar la gestión de su negocio. Emita facturas y boletas con facilidad, administre el registro completo de clientes y productos, y controle sus ingresos y salidas con un historial detallado. Además, genere reportes personalizados, cotizaciones profesionales y lleve un kardex preciso. Todo lo que necesita para optimizar su operación, en un solo lugar.",
+    "linkPage": "https://snazzy-cobbler-f29feb.netlify.app/",
+    "projectImg": "/projects/facturacion.png",
+    "projectGif": "/facturacion.png"
+  },
+  {
+    "id": 7,
+    "title": "SCANPET",
+    "description": "Aplicación móvil desarrollada para Android e iOS que revoluciona el cuidado de tus mascotas. Con SCANPET, podrás registrar toda la información de tus mascotas y almacenarla de forma segura en un chip NFC. Cualquier persona que escanee el chip podrá acceder rápidamente a los datos esenciales de tu mascota y de su propietario, facilitando la identificación y el contacto en caso de emergencia. ¡La tecnología al servicio del bienestar animal!",
+    "linkPage": null,
+    "projectImg": "/projects/mascotas.jpeg",
+    "projectGif": "/facturacion.png"
   }
 ]

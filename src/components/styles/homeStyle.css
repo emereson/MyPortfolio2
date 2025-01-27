@@ -9,8 +9,7 @@
   background: var(--body-background);
   z-index: 1;
 
-  padding: 1em 1em 1em 23%;
-
+  padding: 3em 1em 3em 300px;
 }
 
 .home__section-one {
@@ -245,7 +244,6 @@
 
 @media (max-width: 900px) {
   .home__container {
-
     width: 100%;
     min-height: 100vh;
     height: 100%;
@@ -253,8 +251,6 @@
     padding-top: 6em;
     gap: 4em;
   }
-
-
 
   .home__article-one {
     display: none;

@@ -11,7 +11,7 @@
   overflow: hidden;
   overflow-y: auto;
   gap: 4em;
-  padding: 3em 1em 3em 23%;
+  padding: 3em 1em 3em 300px;
 }
 
 .aboutMe__section-one {
@@ -245,11 +245,13 @@
   align-items: center;
   text-align: center;
   gap: 0.2em;
-  -webkit-box-reflect: below -0.8em -webkit-gradient(linear,
+  -webkit-box-reflect: below -0.8em -webkit-gradient(
+      linear,
       left top,
       left bottom,
       from(transparent),
-      to(rgba(0, 0, 0, 0.227)));
+      to(rgba(0, 0, 0, 0.227))
+    );
   animation: translate 1s forwards;
 }
 

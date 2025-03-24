@@ -22,7 +22,6 @@ function App() {
     setactiveThemeColor(!activeThemeColor);
   };
   useEffect(() => {
-    // Se ejecutará cada vez que darkMode o fontColor cambie
     document.body.className = ` ${darkMode ? 'light-mode' : ''} ${
       fontColor === 'red'
         ? 'theme__red'

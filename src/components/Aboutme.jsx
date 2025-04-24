@@ -52,7 +52,7 @@ const Aboutme = () => {
               Email: <span>escanorrosa123@gmail.com</span>
             </li>
             <li>
-              Whatsapp: <span>+51 929 895 265</span>
+              Whatsapp: <span>+51 927 482 386</span>
             </li>
           </ul>
           <div className="aboutMeSectionTwo__buttons">
